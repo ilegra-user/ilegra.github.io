@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>ilegra</title>
+ <link href="http://engineering.ilegra.com/atom.xml" rel="self"/>
+ <link href="http://engineering.ilegra.com/"/>
+ <updated>2014-03-14T14:07:28-03:00</updated>
+ <id>http://engineering.ilegra.com</id>
+ <author>
+   <name>ilegra</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Podcast - Arquiteturas ESP e CEP</title>
+   <link href="http://engineering.ilegra.com/podcast/2014/01/23/arquiteturas-esp-e-cep/"/>
+   <updated>2014-01-23T00:00:00-02:00</updated>
+   <id>http://engineering.ilegra.com/podcast/2014/01/23/arquiteturas-esp-e-cep</id>
+   <content type="html">&lt;div class=&quot;message&quot;&gt;
+  Este é o segundo episódio do Podcast &lt;a href=&quot;https://soundcloud.com/confraria-dos-arquitetos&quot; target=&quot;_blank&quot;&gt;&quot;Confraria dos Arquitetos&quot;&lt;/a&gt; e o assunto agora é: Arquiteturas ESP (Event Stream Processing) e CEP (Complex Event Processing).
+&lt;/div&gt;
+
+&lt;p&gt;Christophe Marchal, Matheus Boschetti, Jackson Oliveira e Rafael Souza discutem sobre os tópicos:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Quais são as origens dessas arquiteturas;&lt;/li&gt;
+&lt;li&gt;Quais vantagens elas trazem;&lt;/li&gt;
+&lt;li&gt;Suas aplicações;&lt;/li&gt;
+&lt;li&gt;Componentes típicos das arquiteturas;&lt;/li&gt;
+&lt;li&gt;Qual a relação entre as duas siglas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/128526141&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Podcast - Semantic Web</title>
+   <link href="http://engineering.ilegra.com/podcast/2014/01/06/semantic-web-podcast/"/>
+   <updated>2014-01-06T00:00:00-02:00</updated>
+   <id>http://engineering.ilegra.com/podcast/2014/01/06/semantic-web-podcast</id>
+   <content type="html">&lt;div class=&quot;message&quot;&gt;
+  Primeiro episódio do Podcast  &lt;a href=&quot;https://soundcloud.com/confraria-dos-arquitetos&quot; target=&quot;_blank&quot;&gt;&quot;Confraria dos Arquitetos&quot;&lt;/a&gt;. Semantic Web é o tema da vez!
+&lt;/div&gt;
+
+&lt;p&gt;Christophe Marchal, Matheus Boschetti, Jackson Oliveira e Rafael Souza falam sobre o que é Semantic Web e Mashup, discutindo quais vantagens eles trazem e em que contexto podem ser aplicados.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/125455234&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+
+</feed>

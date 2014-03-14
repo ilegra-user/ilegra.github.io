@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            ilegra
+tagline:          'Engineering Blog'
+description:      'Software Engineering Posts'
+url:              http://engineering.ilegra.com
+
+author:
+  name:           'ilegra'
+  url:            http://www.ilegra.com.br
+
+paginate:         30
+
+# Custom vars
+corpurl:      http://www.ilegra.com.br
+
+github:
+  repo:           https://github.com/ilegra
