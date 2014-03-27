@@ -14,7 +14,7 @@ A solução escolhida foi de usar um data grid para cachear o resultado do proce
 Abaixo listarei algumas estratégias que testamos e nossa opinião:
 
 <strong>* Replicate Cache</strong> - Todos os seus nodos de seu cache vão possuir os mesmos dados e de rápido acesso. 
-<em>Ideal:</em> Se você precisa de uma resposta rápida, afinal todos os nodos possuem todas as informações e você possui memória suficiente para colocar nos nodos. 
+<br/><em>Ideal:</em> Se você precisa de uma resposta rápida, afinal todos os nodos possuem todas as informações e você possui memória suficiente para colocar nos nodos. 
 <em>Observação:</em> Se o seu cache contiver muitos dados, e o acesso a esses dados não seja constante, tornasse custoso manter todos seus nodos com todos os dados replicados.
 
 <strong>* Distributed Cache</strong> - Todos seus nodos possuem uma área aonde guardam lógicamente em qual dos nodos está a informação que você procura.
