@@ -4,13 +4,40 @@
  <title>ilegra</title>
  <link href="http://engineering.ilegra.com/atom.xml" rel="self"/>
  <link href="http://engineering.ilegra.com/"/>
- <updated>2014-03-14T14:07:28-03:00</updated>
+ <updated>2014-03-27T17:43:46-03:00</updated>
  <id>http://engineering.ilegra.com</id>
  <author>
    <name>ilegra</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Coherence</title>
+   <link href="http://engineering.ilegra.com/datagrid/2014/03/27/coherence/"/>
+   <updated>2014-03-27T00:00:00-03:00</updated>
+   <id>http://engineering.ilegra.com/datagrid/2014/03/27/coherence</id>
+   <content type="html">&lt;p&gt;Vamos falar sobre a experiência que tivemos na implantação do &lt;strong&gt;&lt;a  href=&quot;http://www.oracle.com/technetwork/middleware/coherence/overview/index.html&quot; target=&quot;_blank&quot;&gt;Coherence&lt;/a&gt;&lt;/strong&gt; em um dos nossos projetos, aqui na empresa.&lt;/p&gt;
+
+&lt;p&gt;Um dos nossos clientes tinha um processo que podia demorar de alguns minutos até varias horas para acabar. O resultado do processamento podia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro em cima tinha de ser rápido. &lt;/p&gt;
+
+&lt;p&gt;A solução escolhida foi de usar um data grid para cachear o resultado do processo e conseguir acessar esse resultado em alguns milisegundos. Normalmente, se usa um data grid quando precisa de mais memória do que uma única máquina. Um data grid roda em cima de um cluster de máquinas e vai distribuir os dados entre os servidores. A ideia é que qualquer nodo consiga saber aonde achar qualquer informação no cluster. A ilegra costuma usar soluções open source, por isso inicialmente optamos pelo &lt;strong&gt;&lt;a href=&quot;http://www.terracotta.org/&quot; target=&quot;_blank&quot;&gt;Terracota&lt;/a&gt;&lt;/strong&gt;. Porém tivemos algumas dificuldades em configurar ele para descartar as chaves menos usadas. Como o cliente tinha uma licença para usar Coherence, acabamos migrando para essa solução. &lt;/p&gt;
+
+&lt;p&gt;Abaixo listarei algumas estratégias de cache que testamos, e a nossa opinião.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;* Replicate Cache&lt;/strong&gt; - Todos os nodos do cache possuirão os mesmos dados com um rápido acesso. 
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; Quando a necessidade é uma resposta rápida e existe memória suficiente para colocar em todos os nodos.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quando o seu cache contiver muitos dados e o acesso a esses dados não é constante, tornasse custoso manter todos seus nodos com todos os dados replicados.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;* Distributed Cache&lt;/strong&gt; - Todos seus nodos possuem uma área onde guardam lógicamente qual dos nodos contém a informação requisitada.
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; Tipologia ideal quando você possui muitas informações, mas ao mesmo tempo é custoso demais, em relação a memória, replicar esses dados em todos os nodos.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quanto o maior número de nodos, menor o espaço em memória necessário. Isso acontece porque cada nodo além de saber logicamente onde encontrar a informação, possui uma área primária para guardar os dados e um espaço de backup usado para recuperar as informações caso um nodo desconecte.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;* Near Cache&lt;/strong&gt; - Cada nodo além de possuir a informação de onde os dados estão, igual ao Distributed Cache, possui uma área local em memória configurável que guarda alguns dados previamente acessados.
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; É considerado mais balanceado dos três citados, principalmente em relação ao custo benefício. Além de possuir informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do cache é alto e possui um espaço considerável para guardar no cache local algumas informações, evitando assim tráfego desnecessário de rede.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Podcast - Arquiteturas ESP e CEP</title>

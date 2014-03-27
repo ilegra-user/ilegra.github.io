@@ -5,7 +5,7 @@ author: Leonardo Amarilho e Christophe Marchal
 categories: datagrid
 ---
 
-Vamos falar sobre a experiência que tivemos na implantação do <strong><a  href="http://www.oracle.com/technetwork/middleware/coherence/overview/index.html" target="_blank">Terracota</a></strong> em um dos nossos projetos, aqui na empresa.
+Vamos falar sobre a experiência que tivemos na implantação do <strong><a  href="http://www.oracle.com/technetwork/middleware/coherence/overview/index.html" target="_blank">Coherence</a></strong> em um dos nossos projetos, aqui na empresa.
 
 Um dos nossos clientes tinha um processo que podia demorar de alguns minutos até varias horas para acabar. O resultado do processamento podia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro em cima tinha de ser rápido. 
 
@@ -24,8 +24,3 @@ Abaixo listarei algumas estratégias de cache que testamos, e a nossa opinião.
 <strong>* Near Cache</strong> - Cada nodo além de possuir a informação de onde os dados estão, igual ao Distributed Cache, possui uma área local em memória configurável que guarda alguns dados previamente acessados.
 <br/><em>Ideal:</em> É considerado mais balanceado dos três citados, principalmente em relação ao custo benefício. Além de possuir informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
 <br/><em>Observação:</em> Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do cache é alto e possui um espaço considerável para guardar no cache local algumas informações, evitando assim tráfego desnecessário de rede.
-
-<em>Referências:</em>
-<br/>* http://terracotta.org/
-<br/>* http://www.oracle.com/technetwork/middleware/coherence/overview/index.html 
-
