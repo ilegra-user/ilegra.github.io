@@ -15,13 +15,13 @@ Abaixo listarei algumas estratégias que testamos e nossa opinião:
 
 <strong>* Replicate Cache</strong> - Todos os seus nodos de seu cache vão possuir os mesmos dados e de rápido acesso. 
 <br/><em>Ideal:</em> Se você precisa de uma resposta rápida, afinal todos os nodos possuem todas as informações e você possui memória suficiente para colocar nos nodos. 
-<em>Observação:</em> Se o seu cache contiver muitos dados, e o acesso a esses dados não seja constante, tornasse custoso manter todos seus nodos com todos os dados replicados.
+<br/><em>Observação:</em> Se o seu cache contiver muitos dados, e o acesso a esses dados não seja constante, tornasse custoso manter todos seus nodos com todos os dados replicados.
 
 <strong>* Distributed Cache</strong> - Todos seus nodos possuem uma área aonde guardam lógicamente em qual dos nodos está a informação que você procura.
-<em>Ideal:</em> Tipologia ideal quando você possui muitas informações, mas ao mesmo tempo é custoso demais, em relação a memória, replicar esses dados em todos os nodos.
-<em>Observação:</em> Quanto o maior número de nodos, menor o espaço em memória necessário. Isso acontece porque cada nodo além de saber logicamente aonde encontrar a informação, possui uma área primária para guardar os dados e um espaço de backup, onde usa para recuperar as informações caso um nodo desconecte.
+<br/><em>Ideal:</em> Tipologia ideal quando você possui muitas informações, mas ao mesmo tempo é custoso demais, em relação a memória, replicar esses dados em todos os nodos.
+<br/><em>Observação:</em> Quanto o maior número de nodos, menor o espaço em memória necessário. Isso acontece porque cada nodo além de saber logicamente aonde encontrar a informação, possui uma área primária para guardar os dados e um espaço de backup, onde usa para recuperar as informações caso um nodo desconecte.
 
 <strong>* Near Cache</strong> - Cada nodo além de possuir a informação de onde os dados estão, igual ao Distributed Cache, possui uma área local em memória configurável que guarda alguns dados já acessados.
-<em>Ideal:</em> Considerado o mais balanceado entre os dois anteriores, em relação ao custo benefício. Além de ter informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
-<em>Observação:</em> Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do seu cache é alto e você possui um espaço considerável, para guardar no cache local algumas informações, assim evitando tráfego de rede.
+<br/><em>Ideal:</em> Considerado o mais balanceado entre os dois anteriores, em relação ao custo benefício. Além de ter informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
+<br/><em>Observação:</em> Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do seu cache é alto e você possui um espaço considerável, para guardar no cache local algumas informações, assim evitando tráfego de rede.
 
