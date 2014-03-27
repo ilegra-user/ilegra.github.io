@@ -2,14 +2,14 @@
 layout: post
 title: Coherence
 author: Leonardo Amarilho e Christophe Marchal
-categories: data grid
+categories: datagrid
 ---
 
 Vamos falar sobre a experiência que tivemos na implantação do Coherence em um dos nossos projetos, aqui na empresa.
 
-Um dos nossos clientes tinha um processo que podia demorar de alguns minutos até varias horas para acabar. O resultado do processamento podia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro em cima tinha que ser rápido. Por tanto não podia chamar o processo de novo.
+Um dos nossos clientes tinha um processo que podia demorar de alguns minutos até varias horas para acabar. O resultado do processamento podia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro em cima tinha de ser rápido. 
 
-A solução escolhida foi de usar um data grid para cachear o resultado do processo e conseguir depois acessar esse resultado em alguns milisegundos. Normalmente, se usa um data grid quando precisa de mais memória do que uma máquina só tem. Um data grid roda em cima de um cluster de máquinas e vai distribuir os dados entre os servidores. A ideia é que qualquer nodo consegue saber aonde achar qualquer informação no cluster. A ilegra costuma usar soluções open source e livres, por isso que primeiro usamos a solução do Terracotta. Porém tivemos algumas dificuldades em configurar ele para descartar as chaves menos usadas. Como o cliente tinha uma licença para usar Coherence, acabamos migrando para Coherence. 
+A solução escolhida foi de usar um data grid para cachear o resultado do processo e conseguir depois acessar esse resultado em alguns milisegundos. Normalmente, se usa um data grid quando precisa de mais memória do que uma única máquina. Um data grid roda em cima de um cluster de máquinas e vai distribuir os dados entre os servidores. A ideia é que qualquer nodo consiga saber aonde achar qualquer informação no cluster. A ilegra costuma usar soluções open source e livres, por isso que primeiro usamos a solução do Terracotta. Porém tivemos algumas dificuldades em configurar ele para descartar as chaves menos usadas. Como o cliente tinha uma licença para usar Coherence, acabamos migrando para essa solução. 
 
 Abaixo listarei algumas estratégias que testamos e nossa opinião:
 
