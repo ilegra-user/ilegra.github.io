@@ -9,7 +9,7 @@ O paradigma de programação funcional, e suas diversas ramificações tem se mo
 
 Funções
 =========
-Enquanto no mundo programação imperativa, tipos primitivos são valores, e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas <b>cidadãos de primeira classe</b> (Higher order functions). 
+Enquanto no mundo programação imperativa tipos primitivos são valores, e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas <b>cidadãos de primeira classe</b> (Higher order functions). 
 
 Isto significa dizer que no paradigma funcional uma função tem <b>o mesmo peso ou importância que um tipo primitivo</b> (funções são valores), e sendo assim elas aparecerão de forma muito mais frequente no decorrer dos seus blocos de código (funções podem receber, retornar outras funções, por exemplo).
 
