@@ -30,7 +30,7 @@ A partir da idéia de composição, se tem uma série de nomenclaturas utilizada
 
 O conhecimento dos termos em si não é estritamente necessário para quem está iniciando com o paradigma funcional, porém na medida em que se buscam soluções mais robustas, sem que para isto haja perda de simplicidade, se faz necessário cada vez mais o conhecimento e a familiaridade com estes conceitos para que se possa tirar um melhor proveito da linguagem e paradigma com o qual se está desenvolvendo.
 
-Referências
+Links úteis
 =========
 http://en.wikipedia.org/wiki/Function_composition_(computer_science)
 
