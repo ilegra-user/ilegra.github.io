@@ -32,8 +32,14 @@ O conhecimento dos termos em si não é estritamente necessário para quem está
 
 Referências
 =========
+http://en.wikipedia.org/wiki/Function_composition_(computer_science)
+
+http://www.slideshare.net/calewis/jax-func-4557288
+
 http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads
 
 http://aeflash.com/2013-06/monads.html
 
 http://www.codecommit.com/blog/ruby/monads-are-not-metaphors
+
+
