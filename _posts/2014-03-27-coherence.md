@@ -16,7 +16,7 @@ Abaixo listarei algumas estratégias de cache que testamos, e a nossa opinião.
 
 <strong>* Replicate Cache</strong> - Todos os nodos do cache possuirão os mesmos dados com um rápido acesso. 
 <br/><em>Ideal:</em> Quando a necessidade é uma resposta rápida e existe memória suficiente para colocar em todos os nodos.
-<br/><em>Observação:</em> Quando o seu cache contiver muitos dados e o acesso a esses dados não é constante, tornasse custoso manter todos seus nodos com todos os dados replicados.
+<br/><em>Observação:</em> Quando o seu cache contiver muitos dados e o acesso a esses dados não é constante, torna-se custoso manter todos seus nodos com todos os dados replicados.
 
 <strong>* Distributed Cache</strong> - Todos seus nodos possuem uma área onde guardam lógicamente qual dos nodos contém a informação requisitada.
 <br/><em>Ideal:</em> Tipologia ideal quando você possui muitas informações, mas ao mesmo tempo é custoso demais, em relação a memória, replicar esses dados em todos os nodos.
