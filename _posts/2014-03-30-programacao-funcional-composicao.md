@@ -6,7 +6,7 @@ author: Joel Correa
 categories: functional-programming
 ---
 
-O paradigma de programação funcional e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém há uma série de discussões a respeito da aplicação do paradigma a problemas concretos de negócio, ou seja, até que ponto deve-se considerar aplicar as soluções funcionais a questões fora o domínio matemático, e, de que forma isto se dá? Para isto é necessário desmitificar certas questões.
+O paradigma de programação funcional e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém há uma série de discussões a respeito da aplicação do paradigma a problemas concretos de negócio, ou seja, até que ponto deve-se considerar aplicar as soluções funcionais a questões fora o domínio matemático, e, de que forma isto se dá? Para isto é necessário desmistificar certas questões.
 
 Funções
 =========
