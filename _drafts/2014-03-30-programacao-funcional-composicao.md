@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: Programação funcional - Composição
 author: Joel Correa
-categories: programacao-funcional
+categories: functional-programming
 ---
 
 O paradigma de programação funcional, e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém há uma série de discussões a respeito da aplicação do paradigma a problemas concretos de negócio, ou seja, até que ponto deve-se considerar aplicar as soluções funcionais a questões fora o domínio matemático, e de que forma isto se dá? Para isto é necessário desmistificar certas questões.
@@ -30,3 +30,8 @@ A partir da idéia de composição, se tem uma série de nomenclaturas utilizada
 
 O conhecimento dos termos em si não é estritamente necessário para quem está iniciando com o paradigma funcional, porém na medida em que se buscam soluções mais robustas, sem que para isto haja perda de simplicidade, se faz necessário cada vez mais o conhecimento e a familiaridade com estes conceitos para que se possa tirar um melhor proveito da linguagem e paradigma com o qual se está desenvolvendo.
 
+Referências
+=========
+http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads
+http://aeflash.com/2013-06/monads.html
+http://www.codecommit.com/blog/ruby/monads-are-not-metaphors
