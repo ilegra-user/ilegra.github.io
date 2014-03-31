@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title: Programação funcional - Composição
 author: Joel Correa
 categories: programacao-funcional
