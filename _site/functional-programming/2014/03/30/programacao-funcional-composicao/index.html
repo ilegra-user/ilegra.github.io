@@ -10,7 +10,7 @@
 
   <title>
     
-      Podcast - Arquiteturas ESP e CEP &middot; ilegra
+      Programação funcional - Composição &middot; ilegra
     
   </title>
 
@@ -94,23 +94,43 @@
 
       <div class="container content">
         <div class="post">
-  <h1 class="post-title">Podcast - Arquiteturas ESP e CEP</h1>
-  <span class="post-date">23 Jan 2014</span>
-  <div class="message">
-  Este é o segundo episódio do Podcast <a href="https://soundcloud.com/confraria-dos-arquitetos" target="_blank">"Confraria dos Arquitetos"</a> e o assunto agora é: Arquiteturas ESP (Event Stream Processing) e CEP (Complex Event Processing).
-</div>
+  <h1 class="post-title">Programação funcional - Composição</h1>
+  <span class="post-date">30 Mar 2014</span>
+  <p>O paradigma de programação funcional e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém há uma série de discussões a respeito da aplicação do paradigma a problemas concretos de negócio, ou seja, até que ponto deve-se considerar aplicar as soluções funcionais a questões fora o domínio matemático, e, de que forma isto se dá? Para isto é necessário desmitificar certas questões.</p>
 
-<p>Christophe Marchal, Matheus Boschetti, Jackson Oliveira e Rafael Souza discutem sobre os tópicos:</p>
+<h1>Funções</h1>
 
-<ul>
-<li>Quais são as origens dessas arquiteturas;</li>
-<li>Quais vantagens elas trazem;</li>
-<li>Suas aplicações;</li>
-<li>Componentes típicos das arquiteturas;</li>
-<li>Qual a relação entre as duas siglas.</li>
-</ul>
+<p>Enquanto no mundo programação imperativa tipos primitivos são valores e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas <b>cidadãos de primeira classe</b> (Higher order functions). </p>
 
-<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/128526141&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
+<p>Isto significa dizer que no paradigma funcional uma função tem <b>o mesmo peso ou importância que um tipo primitivo</b> (funções são valores). Sendo assim elas aparecerão de forma muito mais frequente no decorrer dos seus blocos de código (funções podem receber ou retornar outras funções, por exemplo).</p>
+
+<h1>Complexidade</h1>
+
+<p>Como podemos resolver problemas de negócio complexos com funções? O ponto central aqui é complexidade.</p>
+
+<p>Gerenciar a <b>complexidade</b> é um dos maiores problemas encontrados durante o desenvolvimento de software e um ponto crucial no implementação de aplicações sustentáveis. Para tal o paradigma funcional tem uma solução: Composição. Através de composição é possível criar complexidade a partir da simplicidade, de acordo com a necessidade.</p>
+
+<blockquote>
+Princípio da composicionalidade: Propriedade das expressões <b>complexas</b> cujo sentido é determinado pelos sentidos dos seus <b>constituintes</b> e pelas regras usadas para os <b>combinar</b> - Infopédia 
+</blockquote>
+
+<h1>Composição de funções - Classificação</h1>
+
+<p>A partir da idéia de composição, tem-se uma série de nomenclaturas utilizadas para <b>classificar os tipos de relações</b> possíveis entre as funções. Surge aí a noção de Applicatives, Functors, Monoids, Monads (dentre outros), frequentemente citados em diversas fontes de pesquisa relacionadas a linguagens funcionais. </p>
+
+<p>O conhecimento dos termos em si não é estritamente necessário para quem está iniciando com o paradigma funcional, porém na medida em que se buscam soluções mais robustas, sem que para isto haja perda de simplicidade, faz-se necessário cada vez mais o conhecimento e a familiaridade com estes conceitos para que se possa tirar um melhor proveito da linguagem e paradigma com o qual se está desenvolvendo.</p>
+
+<h1>Links úteis</h1>
+
+<p>http://en.wikipedia.org/wiki/Function<em>composition</em>(computer_science)</p>
+
+<p>http://www.slideshare.net/calewis/jax-func-4557288</p>
+
+<p>http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads</p>
+
+<p>http://aeflash.com/2013-06/monads.html</p>
+
+<p>http://www.codecommit.com/blog/ruby/monads-are-not-metaphors</p>
 
 </div>
 
@@ -137,18 +157,18 @@
     
       <li>
         <h3>
-          <a href="/functional-programming/2014/03/30/programacao-funcional-composicao/">
-            Programação funcional - Composição
-            <small>30 Mar 2014</small>
+          <a href="/datagrid/2014/03/27/coherence/">
+            Coherence
+            <small>27 Mar 2014</small>
           </a>
         </h3>
       </li>
     
       <li>
         <h3>
-          <a href="/datagrid/2014/03/27/coherence/">
-            Coherence
-            <small>27 Mar 2014</small>
+          <a href="/podcast/2014/01/23/arquiteturas-esp-e-cep/">
+            Podcast - Arquiteturas ESP e CEP
+            <small>23 Jan 2014</small>
           </a>
         </h3>
       </li>
