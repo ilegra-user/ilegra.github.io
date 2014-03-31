@@ -10,7 +10,7 @@ O paradigma de programação funcional e suas diversas ramificações tem se mos
 
 Funções
 =========
-Enquanto no mundo programação imperativa tipos primitivos são valores e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas <b>cidadãos de primeira classe</b> (Higher order functions). 
+Enquanto no mundo da programação imperativa tipos primitivos são valores e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas <b>cidadãos de primeira classe</b> (Higher order functions). 
 
 Isto significa dizer que no paradigma funcional uma função tem <b>o mesmo peso ou importância que um tipo primitivo</b> (funções são valores). Sendo assim elas aparecerão de forma muito mais frequente no decorrer dos seus blocos de código (funções podem receber ou retornar outras funções, por exemplo).
 
@@ -32,14 +32,14 @@ O conhecimento dos termos em si não é estritamente necessário para quem está
 
 Links úteis
 =========
-http://en.wikipedia.org/wiki/Function_composition_(computer_science)
+<a target="_blank" href="http://en.wikipedia.org/wiki/Function_composition_(computer_science)">http://en.wikipedia.org/wiki/Function_composition_(computer_science)</a>
 
-http://www.slideshare.net/calewis/jax-func-4557288
+<a target="_blank" href="">http://www.slideshare.net/calewis/jax-func-4557288</a>
 
-http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads
+<a target="_blank" href="">http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads</a>
 
-http://aeflash.com/2013-06/monads.html
+<a target="_blank" href="">http://aeflash.com/2013-06/monads.html</a>
 
-http://www.codecommit.com/blog/ruby/monads-are-not-metaphors
+<a target="_blank" href="">http://www.codecommit.com/blog/ruby/monads-are-not-metaphors</a>
 
 
