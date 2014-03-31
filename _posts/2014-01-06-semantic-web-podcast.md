@@ -2,6 +2,7 @@
 layout: post
 title: Podcast - Semantic Web
 categories: podcast
+comments: true
 ---
 
 

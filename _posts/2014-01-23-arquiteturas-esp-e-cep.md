@@ -2,6 +2,7 @@
 layout: post
 title: Podcast - Arquiteturas ESP e CEP
 categories: podcast
+comments: true
 ---
 
 

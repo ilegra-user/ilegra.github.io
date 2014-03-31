@@ -3,6 +3,7 @@ layout: post
 title: Coherence
 author: Leonardo Amarilho e Christophe Marchal
 categories: datagrid
+comments: true
 ---
 
 Vamos falar sobre a experiência que tivemos na implantação do <strong><a  href="http://www.oracle.com/technetwork/middleware/coherence/overview/index.html" target="_blank">Coherence</a></strong> em um dos nossos projetos, aqui na empresa.
