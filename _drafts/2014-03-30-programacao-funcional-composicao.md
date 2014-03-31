@@ -33,5 +33,7 @@ O conhecimento dos termos em si não é estritamente necessário para quem está
 Referências
 =========
 http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads
+
 http://aeflash.com/2013-06/monads.html
+
 http://www.codecommit.com/blog/ruby/monads-are-not-metaphors
