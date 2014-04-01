@@ -4,7 +4,7 @@
  <title>ilegra</title>
  <link href="http://engineering.ilegra.com/atom.xml" rel="self"/>
  <link href="http://engineering.ilegra.com/"/>
- <updated>2014-04-01T13:37:12-03:00</updated>
+ <updated>2014-04-01T18:10:03-03:00</updated>
  <id>http://engineering.ilegra.com</id>
  <author>
    <name>ilegra</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Podcast - Arquiteturas ESP e CEP</title>
+   <title>Podcast - Big Data</title>
    <link href="http://engineering.ilegra.com/podcast/2014/04/01/podcast-bigdata/"/>
    <updated>2014-04-01T00:00:00-03:00</updated>
    <id>http://engineering.ilegra.com/podcast/2014/04/01/podcast-bigdata</id>
