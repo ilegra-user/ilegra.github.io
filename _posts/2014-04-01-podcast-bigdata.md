@@ -15,6 +15,6 @@ Christophe Marchal, Matheus Boschetti, Jackson Oliveira e Rafael Souza discutem 
 * Surgimento do conceito de BigData;
 * Aplicações e usos;
 * Arquitetura típica;
-* Hadoop, Hive, Pig, Map Reduce;
+* Hadoop, Hive, Pig, Map Reduce.
 
 <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/142540308&amp;auto_play=false&amp;hide_related=false&amp;visual=true"></iframe>
