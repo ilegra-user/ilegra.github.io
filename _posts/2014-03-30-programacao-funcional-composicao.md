@@ -18,7 +18,7 @@ Complexidade
 =========
 Como podemos resolver problemas de negócio complexos com funções? Complexidade é o ponto central aqui.
 
-Gerenciar a <b>complexidade</b> é um dos maiores problemas encontrados durante o desenvolvimento de software e  também um ponto crucial na implementação de aplicações sustentáveis. Para gerenciar, o paradigma funcional tem uma solução:  a composição. Por meio de composição, é possível criar complexidade a partir da simplicidade, de acordo com a necessidade.
+Gerenciar a <b>complexidade</b> é um dos maiores problemas encontrados durante o desenvolvimento de software e  também um ponto crucial na implementação de aplicações sustentáveis. Para gerenciar, o paradigma funcional tem uma solução:  a composição. Por meio de composição é possível criar complexidade a partir da simplicidade de acordo com a necessidade.
 
 <blockquote>
 Princípio da composicionalidade: Propriedade das expressões <b>complexas</b> cujo sentido é determinado pelos sentidos dos seus <b>constituintes</b> e pelas regras usadas para os <b>combinar</b> - Infopédia 
