@@ -4,7 +4,7 @@
  <title>ilegra</title>
  <link href="http://engineering.ilegra.com/atom.xml" rel="self"/>
  <link href="http://engineering.ilegra.com/"/>
- <updated>2014-04-01T18:10:03-03:00</updated>
+ <updated>2014-04-08T18:35:00-03:00</updated>
  <id>http://engineering.ilegra.com</id>
  <author>
    <name>ilegra</name>
@@ -27,7 +27,7 @@
 &lt;li&gt;Surgimento do conceito de BigData;&lt;/li&gt;
 &lt;li&gt;Aplicações e usos;&lt;/li&gt;
 &lt;li&gt;Arquitetura típica;&lt;/li&gt;
-&lt;li&gt;Hadoop, Hive, Pig, Map Reduce;&lt;/li&gt;
+&lt;li&gt;Hadoop, Hive, Pig, Map Reduce.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/142540308&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;
@@ -39,19 +39,19 @@
    <link href="http://engineering.ilegra.com/functional-programming/2014/03/30/programacao-funcional-composicao/"/>
    <updated>2014-03-30T00:00:00-03:00</updated>
    <id>http://engineering.ilegra.com/functional-programming/2014/03/30/programacao-funcional-composicao</id>
-   <content type="html">&lt;p&gt;O paradigma de programação funcional e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém há uma série de discussões a respeito da aplicação do paradigma a problemas concretos de negócio, ou seja, até que ponto deve-se considerar aplicar as soluções funcionais a questões fora o domínio matemático, e, de que forma isto se dá? Para isto é necessário desmistificar certas questões.&lt;/p&gt;
+   <content type="html">&lt;p&gt;O paradigma de programação funcional e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém, há uma série de discussões que tratam da aplicação do paradigma a problemas concretos de negócio. Até que ponto deve-se considerar aplicar as soluções funcionais para questões fora do domínio matemático? E de que forma isto se dá? Para responder, é necessário desmistificar certas questões.&lt;/p&gt;
 
 &lt;h1&gt;Funções&lt;/h1&gt;
 
-&lt;p&gt;Enquanto no mundo da programação imperativa tipos primitivos são valores e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas &lt;b&gt;cidadãos de primeira classe&lt;/b&gt; (Higher order functions). &lt;/p&gt;
+&lt;p&gt;No mundo da programação imperativa, os tipos primitivos são valores e as funções são componentes que realizam operações modificando o estado da aplicação. Já no paradigma funcional, as funções tem uma posição privilegiada, a ponto de serem consideradas &lt;b&gt;cidadãos de primeira classe&lt;/b&gt; (Higher order functions). &lt;/p&gt;
 
-&lt;p&gt;Isto significa dizer que no paradigma funcional uma função tem &lt;b&gt;o mesmo peso ou importância que um tipo primitivo&lt;/b&gt; (funções são valores). Sendo assim elas aparecerão de forma muito mais frequente no decorrer dos seus blocos de código (funções podem receber ou retornar outras funções, por exemplo).&lt;/p&gt;
+&lt;p&gt;Isto significa dizer que no paradigma funcional uma função tem &lt;b&gt;o mesmo peso ou importância que um tipo primitivo&lt;/b&gt; (funções são valores). Sendo assim, elas aparecerão de forma muito mais frequente no decorrer dos seus blocos de código (funções podem receber ou retornar outras funções, por exemplo).&lt;/p&gt;
 
 &lt;h1&gt;Complexidade&lt;/h1&gt;
 
-&lt;p&gt;Como podemos resolver problemas de negócio complexos com funções? O ponto central aqui é complexidade.&lt;/p&gt;
+&lt;p&gt;Como podemos resolver problemas de negócio complexos com funções? Complexidade é o ponto central aqui.&lt;/p&gt;
 
-&lt;p&gt;Gerenciar a &lt;b&gt;complexidade&lt;/b&gt; é um dos maiores problemas encontrados durante o desenvolvimento de software e um ponto crucial no implementação de aplicações sustentáveis. Para tal o paradigma funcional tem uma solução: Composição. Através de composição é possível criar complexidade a partir da simplicidade, de acordo com a necessidade.&lt;/p&gt;
+&lt;p&gt;Gerenciar a &lt;b&gt;complexidade&lt;/b&gt; é um dos maiores problemas encontrados durante o desenvolvimento de software e  também um ponto crucial na implementação de aplicações sustentáveis. Para gerenciar, o paradigma funcional tem uma solução:  a composição. Por meio de composição é possível criar complexidade a partir da simplicidade de acordo com a necessidade.&lt;/p&gt;
 
 &lt;blockquote&gt;
 Princípio da composicionalidade: Propriedade das expressões &lt;b&gt;complexas&lt;/b&gt; cujo sentido é determinado pelos sentidos dos seus &lt;b&gt;constituintes&lt;/b&gt; e pelas regras usadas para os &lt;b&gt;combinar&lt;/b&gt; - Infopédia 
@@ -59,9 +59,9 @@ Princípio da composicionalidade: Propriedade das expressões &lt;b&gt;complexas
 
 &lt;h1&gt;Composição de funções - Classificação&lt;/h1&gt;
 
-&lt;p&gt;A partir da idéia de composição, tem-se uma série de nomenclaturas utilizadas para &lt;b&gt;classificar os tipos de relações&lt;/b&gt; possíveis entre as funções. Surge aí a noção de Applicatives, Functors, Monoids, Monads (dentre outros), frequentemente citados em diversas fontes de pesquisa relacionadas a linguagens funcionais. &lt;/p&gt;
+&lt;p&gt;A partir da ideia de composição, tem-se uma série de nomenclaturas utilizadas para &lt;b&gt;classificar os tipos de relações&lt;/b&gt; possíveis entre as funções. Surge aí, a noção de Applicatives, Functors, Monoids, Monads (dentre outros), frequentemente citados em diversas fontes de pesquisa relacionadas as linguagens funcionais. &lt;/p&gt;
 
-&lt;p&gt;O conhecimento dos termos em si não é estritamente necessário para quem está iniciando com o paradigma funcional, porém na medida em que se buscam soluções mais robustas, sem que para isto haja perda de simplicidade, faz-se necessário cada vez mais o conhecimento e a familiaridade com estes conceitos para que se possa tirar um melhor proveito da linguagem e paradigma com o qual se está desenvolvendo.&lt;/p&gt;
+&lt;p&gt;O conhecimento dos termos em si, não é estritamente necessário para quem está iniciando com o paradigma funcional, porém, na medida em que se buscam soluções mais robustas, sem que para isto haja perda de simplicidade, faz-se necessário cada vez mais o conhecimento e a familiaridade com estes conceitos para que se possa tirar um melhor proveito da linguagem e paradigma com o qual se está desenvolvendo.&lt;/p&gt;
 
 &lt;h1&gt;Links úteis&lt;/h1&gt;
 
@@ -82,25 +82,25 @@ Princípio da composicionalidade: Propriedade das expressões &lt;b&gt;complexas
    <link href="http://engineering.ilegra.com/datagrid/2014/03/27/coherence/"/>
    <updated>2014-03-27T00:00:00-03:00</updated>
    <id>http://engineering.ilegra.com/datagrid/2014/03/27/coherence</id>
-   <content type="html">&lt;p&gt;Vamos falar sobre a experiência que tivemos na implantação do &lt;strong&gt;&lt;a  href=&quot;http://www.oracle.com/technetwork/middleware/coherence/overview/index.html&quot; target=&quot;_blank&quot;&gt;Coherence&lt;/a&gt;&lt;/strong&gt; em um dos nossos projetos, aqui na empresa.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Em um dos nossos projetos aqui na &lt;strong&gt;&lt;a  href=&quot;http://www.ilegra.com&quot; target=&quot;_blank&quot;&gt;ilegra&lt;/a&gt;&lt;/strong&gt;, tivemos a experiência de implantação do &lt;strong&gt;&lt;a  href=&quot;http://www.oracle.com/technetwork/middleware/coherence/overview/index.html&quot; target=&quot;_blank&quot;&gt;Coherence&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Um dos nossos clientes tinha um processo que podia demorar de alguns minutos até varias horas para acabar. O resultado do processamento podia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro em cima tinha de ser rápido. &lt;/p&gt;
+&lt;p&gt;No projeto, tínhamos um processo que podia demorar de alguns minutos até várias horas para terminar. O resultado do processamento poderia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro teria de ser rápido. &lt;/p&gt;
 
-&lt;p&gt;A solução escolhida foi de usar um data grid para cachear o resultado do processo e conseguir acessar esse resultado em alguns milisegundos. Normalmente, se usa um data grid quando precisa de mais memória do que uma única máquina. Um data grid roda em cima de um cluster de máquinas e vai distribuir os dados entre os servidores. A ideia é que qualquer nodo consiga saber aonde achar qualquer informação no cluster. A ilegra costuma usar soluções open source, por isso inicialmente optamos pelo &lt;strong&gt;&lt;a href=&quot;http://www.terracotta.org/&quot; target=&quot;_blank&quot;&gt;Terracota&lt;/a&gt;&lt;/strong&gt;. Porém tivemos algumas dificuldades em configurar ele para descartar as chaves menos usadas. Como o cliente tinha uma licença para usar Coherence, acabamos migrando para essa solução. &lt;/p&gt;
+&lt;p&gt;A solução escolhida foi usar um data grid para armazenar os resultados do processo em cache e conseguir acessar esse resultado em alguns milissegundos. Normalmente, utiliza-se um data grid quando é necessário mais memória, do que uma única máquina. Um data grid roda em cima de um cluster de máquinas e distribui os dados entre os servidores. A ideia é que qualquer nodo consiga saber onde achar qualquer informação no cluster. Costumamos usar aqui na ilegra, soluções open source, por tal motivo, inicialmente optamos pelo &lt;strong&gt;&lt;a href=&quot;http://www.terracotta.org/&quot; target=&quot;_blank&quot;&gt;Terracota&lt;/a&gt;&lt;/strong&gt;. Porém, tivemos algumas dificuldades em configurar para descartar as chaves menos usadas. Como o cliente tinha uma licença para usar Coherence, acabamos migrando para essa solução. &lt;/p&gt;
 
-&lt;p&gt;Abaixo listarei algumas estratégias de cache que testamos, e a nossa opinião.&lt;/p&gt;
+&lt;p&gt;Abaixo listamos algumas estratégias de cache que testamos e a nossa visão sobre elas.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;* Replicate Cache&lt;/strong&gt; - Todos os nodos do cache possuirão os mesmos dados com um rápido acesso. 
 &lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; Quando a necessidade é uma resposta rápida e existe memória suficiente para colocar em todos os nodos.
-&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quando o seu cache contiver muitos dados e o acesso a esses dados não é constante, torna-se custoso manter todos seus nodos com todos os dados replicados.&lt;/p&gt;
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quando o seu cache contiver muitos dados e o acesso aos dados não é constante, torna-se custoso manter todos seus nodos com todos os dados replicados.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;* Distributed Cache&lt;/strong&gt; - Todos seus nodos possuem uma área onde guardam lógicamente qual dos nodos contém a informação requisitada.
+&lt;p&gt;&lt;strong&gt;* Distributed Cache&lt;/strong&gt; - Todos seus nodos possuem uma área onde guardam logicamente qual dos nodos contém a informação requisitada.
 &lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; Tipologia ideal quando você possui muitas informações, mas ao mesmo tempo é custoso demais, em relação a memória, replicar esses dados em todos os nodos.
-&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quanto o maior número de nodos, menor o espaço em memória necessário. Isso acontece porque cada nodo além de saber logicamente onde encontrar a informação, possui uma área primária para guardar os dados e um espaço de backup usado para recuperar as informações caso um nodo desconecte.&lt;/p&gt;
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quanto o maior número de nodos, menor o espaço em memória necessário. Isto acontece porque cada nodo além de saber logicamente onde encontrar a informação, possui uma área primária para guardar os dados e um espaço de backup usado para recuperar as informações, caso um nodo desconecte.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;* Near Cache&lt;/strong&gt; - Cada nodo além de possuir a informação de onde os dados estão, igual ao Distributed Cache, possui uma área local em memória configurável que guarda alguns dados previamente acessados.
-&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; É considerado mais balanceado dos três citados, principalmente em relação ao custo benefício. Além de possuir informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
-&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do cache é alto e possui um espaço considerável para guardar no cache local algumas informações, evitando assim tráfego desnecessário de rede.&lt;/p&gt;
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; É considerado o mais balanceado dos três citados, principalmente, em relação ao custo benefício. Além de possuir informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do cache são altos e possuem um espaço considerável para guardar no cache local algumas informações, evitando assim tráfego desnecessário de rede.&lt;/p&gt;
 </content>
  </entry>
  

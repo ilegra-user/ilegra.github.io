@@ -16,9 +16,3 @@ author:
   url:            http://www.ilegra.com.br
 
 paginate:         30
-
-# Custom vars
-corpurl:      http://www.ilegra.com.br
-
-github:
-  repo:           https://github.com/ilegra
