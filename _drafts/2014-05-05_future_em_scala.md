@@ -102,7 +102,6 @@
 
 
 ###Referências:###
-<br>
 
 - <http://arild.github.io/scala-workshop>
 
