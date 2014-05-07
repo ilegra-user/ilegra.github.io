@@ -4,13 +4,236 @@
  <title>ilegra</title>
  <link href="http://engineering.ilegra.com/atom.xml" rel="self"/>
  <link href="http://engineering.ilegra.com/"/>
- <updated>2014-04-08T18:35:00-03:00</updated>
+ <updated>2014-05-06T21:40:50-03:00</updated>
  <id>http://engineering.ilegra.com</id>
  <author>
    <name>ilegra</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Design Session</title>
+   <link href="http://engineering.ilegra.com/extreme-programming/2014/05/06/2014-05-07-design-session/"/>
+   <updated>2014-05-06T21:40:39-03:00</updated>
+   <id>http://engineering.ilegra.com/extreme-programming/2014/05/06/2014-05-07-design-session</id>
+   <content type="html">&lt;p&gt;Desing Session, também conhecida como &lt;a href=&quot;http://guide.agilealliance.org/guide/quickdesign.html&quot; title=&quot;Quick Design Session&quot;&gt;Quick Design Session&lt;/a&gt;, é uma das práticas do &lt;a href=&quot;http://www.extremeprogramming.org&quot; title=&quot;Extreme Programming&quot;&gt;Extreme Programming&lt;/a&gt; presente no dia a dia do desenvolvimento de software da ilegra.&lt;/p&gt;
+
+&lt;p&gt;A Design Session é um processo colaborativo de aprendizado e problematização no qual o objetivo é evoluir, iniciar ou afirmar um &lt;a href=&quot;http://martinfowler.com/articles/designDead.html&quot; title=&quot;Software Design&quot;&gt;design de software&lt;/a&gt;. É importante ressaltar que, ao contrário da &lt;a href=&quot;http://en.wikipedia.org/wiki/Big_Design_Up_Front&quot; title=&quot;Big Design Up Front&quot;&gt;fase de Design proposta pelo modelo Waterfall&lt;/a&gt;, a Desing Session não se propõe a entender e resolver todo o problema antes da sua implementação, e sim levantar, de forma rápida, as principais variáveis envolvidas e propor um esboço que funcione como norte para o desenvolvimento.&lt;/p&gt;
+
+&lt;h2&gt;Motivação&lt;/h2&gt;
+
+&lt;p&gt;Essa é uma prática que lida diretamente com os aspectos de manutenção e flexibilidade do software, melhorando a qualidade e, por consequência, a velocidade de entrega do software. Além disso, a Design Session trabalha sob uma visão diferente da codificação e é um ótimo momento para os desenvolvedores buscarem um melhor entendimento do que será desenvolvido e proporem possíveis soluções para o problema em questão.&lt;/p&gt;
+
+&lt;p&gt;As Design Sessions, seguidas de revisões, também podem ser utilizadas como um meio de melhorar algumas habilidades dos desenvolvedores, tais como: capacidade analítica e de abstração, comunicação com PO e com o time, entendimento geral do sistema e &lt;a href=&quot;http://en.wikipedia.org/wiki/How_to_Solve_It&quot; title=&quot;How to Solve it!&quot;&gt;problematização&lt;/a&gt;. &lt;/p&gt;
+
+&lt;h2&gt;Como aplicamos na ilegra&lt;/h2&gt;
+
+&lt;p&gt;As Design Sessions são aplicadas por um desenvolvedor ou em equipe, de forma rápida, em no máximo 30 minutos, embora por vezes despendemos mais tempo. &lt;/p&gt;
+
+&lt;p&gt;Quando é feita por um desenvolvedor, este centraliza a comunicação com o Product Owner (afim de elucidar requisitos) e submete o esboço de sua solução à uma revisão (Design Review). Além disso, esse desenvolvedor fica incumbido de fazer um briefing explicando sua solução para a equipe que irá trabalhar no problema proposto. &lt;/p&gt;
+
+&lt;p&gt;Quando é realizada em equipe, a Design Session é mais dinâmica e colaborativa dispensando revisão e briefing, e nesse caso, os requisitos já devem estar mais claros ou o Product Owner estar junto à equipe.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+&lt;img src=&quot;/public/design-session.jpg&quot; alt=&quot;Design Session colaborativa&quot; title=&quot;Design Session Colaborativa&quot;&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;A prática de Design Session, geralmente é aplicada por User Story e trabalhada em duas &lt;a href=&quot;https://www.youtube.com/watch?v=f84n5oFoZBc#t=320&quot; title=&quot;Hammock Driven Development&quot;&gt;etapas cíclicas&lt;/a&gt;. Em uma dessas etapas olhamos para o contexto do problema: variáveis, requisitos, natureza da informação, componentes envolvidos, participantes e etc. A outra etapa envolve a parte mais técnica do design de software e o ponto fundamental é esboçar a solução que vai nortear o desenvolvimento, nesta etapa estão envolvidos: &lt;a href=&quot;http://sourcemaking.com/design_patterns&quot; title=&quot;Design Patterns&quot;&gt;design patterns&lt;/a&gt;, &lt;a href=&quot;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&quot; title=&quot;SOLID&quot;&gt;SOLID&lt;/a&gt;, trade-off, algoritmo, estrutura de dados, &lt;a href=&quot;http://www.infoq.com/presentations/Simple-Made-Easy&quot; title=&quot;Simple Made Easy&quot;&gt;composição de componentes&lt;/a&gt;, entre outros.&lt;/p&gt;
+
+&lt;h2&gt;O que aprendemos&lt;/h2&gt;
+
+&lt;p&gt;Com a nossa experiência aplicando essa prática aprendemos que o nível de abstração que deve-se chegar no esboço do problema está mais relacionado ao próprio problema do que a alguma regra ou técnica. O que deve ser buscado é que o time &amp;quot;pegue a ideia&amp;quot; da solução proposta e, para tanto, algumas caixas desenhadas em um caderno mostrando relações e responsabilidades de componentes, por vezes, é o suficiente.&lt;/p&gt;
+
+&lt;p&gt;Embora seja comum vermos diagramas de classes e componentes como resultados das Design Sessions, o uso ou padronização de linguagens de modelagem e ferramentas não é obrigatório. O principal objetivo dessa prática não é documentar software, e sim, visualizar o problema e comunicar um esboço de solução ao time. Aqui na ilegra,  geralmente utilizamos cadernos, quadros e &lt;a href=&quot;https://cacoo.com&quot; title=&quot;Cacoo&quot;&gt;cacoo&lt;/a&gt; como ferramentas. Já a linguagem de modelagem gráfica surge sozinha a partir dos gostos e experiência dos times e, na maioria das vezes, ela é um misto de UML, &lt;a href=&quot;http://www.agilemodeling.com/artifacts/crcModel.htm&quot; title=&quot;Class Responsibility Collaborator&quot;&gt;CRC&lt;/a&gt; e muita criatividade.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>2014 05 05_future_em_scala</title>
+   <link href="http://engineering.ilegra.com/2014/05/06/2014-05-05_future_em_scala/"/>
+   <updated>2014-05-06T20:02:04-03:00</updated>
+   <id>http://engineering.ilegra.com/2014/05/06/2014-05-05_future_em_scala</id>
+   <content type="html">&lt;h1&gt;Funture/Promise em  Scala&lt;/h1&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;    Future e uma API de scala que proporciona uma maneira de executar operações em paralelo de forma não bloqueante. 
+     A ideia é que um Future seja uma espécie que objeto que tenha um espaço reservado que podemos trabalhar a espera de um resultado que ainda não possuímos. Com isso podemos compor tarefas simultâneas de forma assíncrona e sem bloqueio de uma forma rápida.
+    Em scala podemos combinar o Future com flatMap, foreach,  for-comprehensions  e filters de uma forma não bloqueante, e imutável.
+    Então definindo Future podemos dizer que é um objeto que contem um valor que pode se tornar disponível . 
+    Um Future pode ser dizer completo ou concluído de duas formas:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Concluído com sucessos e tem valor.&lt;/li&gt;
+&lt;li&gt;Concluído com Falha e possui uma exceção como valor.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Exemplo:&lt;/strong&gt; &lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;import scala.concurrent._
+import ExecutionContext.Implicits.global
+
+val f : Future[List[User]] =  future{
+  dao.getUsers()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Onde:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;import scala.concurrent._&lt;/code&gt;   -&amp;gt; importa  conteúdo necessário para utilizar Future. &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;import ExecutionContext.Implicits.global&lt;/code&gt; -&amp;gt; importa um contexto de execução global padrão do scala , que fornece pools de threads para lidar com assíncronos . &lt;/li&gt;
+&lt;li&gt;em seguida estamos fazendo uma chamada hipotética ao Banco de Dados e com sabemos que isso pode levar algum tempo, faremos uma chamada assíncrona para não bloquear o resto do programa, e no quando estiver pronto teremos a resposta na variável &lt;code&gt;f&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Callbacks:&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;    Mas para interagir com esses valores  do Future precisamos associar a um Callback. Este callback é chamado de forma assíncrona quando o Future for concluído. Se o Future  foi concluído o registro é associado a um callback, o retorno pode tanto ser executado de forma assíncrona, ou sequencial.
+    A forma mais comum de registra um call-back é usando o método onComplete, que aplica seu resultado a um Success se foi concluída com êxito e Failure se for concluída com um exceção.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;import scala.concurrent._
+import ExecutionContext.Implicits.global
+import scala.util.Success
+import scala.util.Failure
+
+case class User(name: String, age: Int)
+
+object TestFuture {
+  val f: Future[List[User]] = future {
+   dao.getUsers() 
+  }
+
+  f onComplete {
+    case Success(result) =&amp;gt; result.map(f=&amp;gt; println(&amp;quot;Users: &amp;quot;+f.name))
+    case Failure(t) =&amp;gt; println(&amp;quot;Ocorreu um erro no Future: &amp;quot; + t.getMessage)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;    Os métodos OnComplete , Success e Failure são do tipo Unit, então esse métodos não podem ser encadeados com outros ou seja tudo que é feito dentro desses métodos morre ali mesmo.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Promises&lt;/h2&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;    Enquanto Future são definidas como um tipo de somente leitura objeto com espaço reservado para um resultado que ainda não existe, o Promises pode ser pensado como um recipiente onde se atribui o valor de um Future completo.  Ou seja um Promise pode ser usado para completar um future com valor quando tem sucesso no método success ou pode ser uma Promise de exeção no método de Failure. E por padrão um Promise completo retorna um Future.  
+    Cria-se uma promessa que é o lugar onde você vai colocar o resultado da computação e da promessa de que você terá um futuro que vai ser usado para ler o resultado que foi colocado na promessa. Quando você completar uma promessa, seja por falha ou sucesso, você irá acionar todo o comportamento que foi anexado ao futuro associado.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;import scala.concurrent._
+import ExecutionContext.Implicits.global
+import scala.util.Success
+import scala.util.Failure
+
+case class User(name: String, age: Int)
+
+object TestFuture {
+  val f: Future[List[User]] = future {
+    dao.getUsers() 
+  }
+
+  val resultPromise: Promise[List[User]] = Promise[List[User]]
+
+  f onComplete {
+    case Success(result) =&amp;gt; resultPromise.success(result)
+    case Failure(t) =&amp;gt; resultPromise.failure(t)
+  }
+
+  resultPromise.future.map { f =&amp;gt;
+    f.map(user =&amp;gt; println(&amp;quot;value = &amp;quot; + user.name))
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Onde:&lt;/strong&gt;
+- A variável resultPromises é literalmente a promessa que teremos uma Lista de usuários 
+- No success é atribuído o valor do Future com sucesso para o promises
+- No Failure  é atribuído o valor de falha ao promises
+- Esses promise continua nos devolvendo um Future, mas uma das formas de eu interagir com esse future é utilizando um map, com um map eu acesso os valores do future e com o segundo map percorremos a Lista de Usuários.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text language-text&quot; data-lang=&quot;text&quot;&gt;    Então podemos  pensar que um Future são os produtores e Promises são os consumidores.  E um Future é essencial para uma referencia read-only para um valor que ainda deve ser processado e um Promise é praticamente o mesmo, exceto que podemos escrever nele,  em resumo os dois você pode realizar leitura mas apenas no promise você pode escrever. 
+    A principal vantagem de Future e (programação assíncrona) , é a tarefa  atuar em segmento diferente, por isso thread principal não fica bloqueada até a tarefa ser concluída. É possível executar outras tarefas ao mesmo tempo. O modelo assíncrono em caso de tarefa de longa duração é muito útil, para que o seu aplicativo reaja a outras ações realizadas pelo  usuário.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Existem outras formas de se trabalhar com Promise e Future mas a ideia foi apresentar a forma mais comum dessas APIs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;Referências:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://arild.github.io/scala-workshop&quot;&gt;http://arild.github.io/scala-workshop&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://docs.scala-lang.org/overviews/core/futures.html&quot;&gt;http://docs.scala-lang.org/overviews/core/futures.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.slideshare.net/AlexandruNedelcu/prezentare-25762173&quot;&gt;http://www.slideshare.net/AlexandruNedelcu/prezentare-25762173&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://doc.akka.io/docs/akka/2.0.1/scala/futures.html&quot;&gt;http://doc.akka.io/docs/akka/2.0.1/scala/futures.html&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://stackoverflow.com/questions/13381134/what-are-the-use-cases-of-scala-concurrent-promise&quot;&gt;http://stackoverflow.com/questions/13381134/what-are-the-use-cases-of-scala-concurrent-promise&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Programação funcional - Composição</title>
+   <link href="http://engineering.ilegra.com/functional-programming/2014/04/08/2014-03-30-programacao-funcional-composicao/"/>
+   <updated>2014-04-08T17:57:57-03:00</updated>
+   <id>http://engineering.ilegra.com/functional-programming/2014/04/08/2014-03-30-programacao-funcional-composicao</id>
+   <content type="html">&lt;p&gt;O paradigma de programação funcional e suas diversas ramificações tem se mostrado uma área de estudo relevante no que diz respeito a escalabilidade de software, produtividade e simplicidade. Porém há uma série de discussões a respeito da aplicação do paradigma a problemas concretos de negócio, ou seja, até que ponto deve-se considerar aplicar as soluções funcionais a questões fora o domínio matemático, e, de que forma isto se dá? Para isto é necessário desmitificar certas questões.&lt;/p&gt;
+
+&lt;h1&gt;Funções&lt;/h1&gt;
+
+&lt;p&gt;Enquanto no mundo programação imperativa tipos primitivos são valores e funções são componentes que realizam operações modificando o estado da aplicação, o paradigma funcional dá uma posição privilegiada às funções, a ponto de serem consideradas &lt;b&gt;cidadãos de primeira classe&lt;/b&gt; (Higher order functions). &lt;/p&gt;
+
+&lt;p&gt;Isto significa dizer que no paradigma funcional uma função tem &lt;b&gt;o mesmo peso ou importância que um tipo primitivo&lt;/b&gt; (funções são valores). Sendo assim elas aparecerão de forma muito mais frequente no decorrer dos seus blocos de código (funções podem receber ou retornar outras funções, por exemplo).&lt;/p&gt;
+
+&lt;h1&gt;Complexidade&lt;/h1&gt;
+
+&lt;p&gt;Como podemos resolver problemas de negócio complexos com funções? O ponto central aqui é complexidade.&lt;/p&gt;
+
+&lt;p&gt;Gerenciar a &lt;b&gt;complexidade&lt;/b&gt; é um dos maiores problemas encontrados durante o desenvolvimento de software e um ponto crucial no implementação de aplicações sustentáveis. Para tal o paradigma funcional tem uma solução: Composição. Através de composição é possível criar complexidade a partir da simplicidade, de acordo com a necessidade.&lt;/p&gt;
+
+&lt;blockquote&gt;
+Princípio da composicionalidade: Propriedade das expressões &lt;b&gt;complexas&lt;/b&gt; cujo sentido é determinado pelos sentidos dos seus &lt;b&gt;constituintes&lt;/b&gt; e pelas regras usadas para os &lt;b&gt;combinar&lt;/b&gt; - Infopédia 
+&lt;/blockquote&gt;
+
+&lt;h1&gt;Composição de funções - Classificação&lt;/h1&gt;
+
+&lt;p&gt;A partir da idéia de composição, tem-se uma série de nomenclaturas utilizadas para &lt;b&gt;classificar os tipos de relações&lt;/b&gt; possíveis entre as funções. Surge aí a noção de Applicatives, Functors, Monoids, Monads (dentre outros), frequentemente citados em diversas fontes de pesquisa relacionadas a linguagens funcionais. &lt;/p&gt;
+
+&lt;p&gt;O conhecimento dos termos em si não é estritamente necessário para quem está iniciando com o paradigma funcional, porém na medida em que se buscam soluções mais robustas, sem que para isto haja perda de simplicidade, faz-se necessário cada vez mais o conhecimento e a familiaridade com estes conceitos para que se possa tirar um melhor proveito da linguagem e paradigma com o qual se está desenvolvendo.&lt;/p&gt;
+
+&lt;h1&gt;Links úteis&lt;/h1&gt;
+
+&lt;p&gt;http://en.wikipedia.org/wiki/Function&lt;em&gt;composition&lt;/em&gt;(computer_science)&lt;/p&gt;
+
+&lt;p&gt;http://www.slideshare.net/calewis/jax-func-4557288&lt;/p&gt;
+
+&lt;p&gt;http://channel9.msdn.com/Shows/Going+Deep/Brian-Beckman-Dont-fear-the-Monads&lt;/p&gt;
+
+&lt;p&gt;http://aeflash.com/2013-06/monads.html&lt;/p&gt;
+
+&lt;p&gt;http://www.codecommit.com/blog/ruby/monads-are-not-metaphors&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Coherence</title>
+   <link href="http://engineering.ilegra.com/datagrid/2014/04/08/2014-03-27-coherence/"/>
+   <updated>2014-04-08T17:57:57-03:00</updated>
+   <id>http://engineering.ilegra.com/datagrid/2014/04/08/2014-03-27-coherence</id>
+   <content type="html">&lt;p&gt;Vamos falar sobre a experiência que tivemos na implantação do &lt;strong&gt;&lt;a  href=&quot;http://www.oracle.com/technetwork/middleware/coherence/overview/index.html&quot; target=&quot;_blank&quot;&gt;Terracota&lt;/a&gt;&lt;/strong&gt; em um dos nossos projetos, aqui na empresa.&lt;/p&gt;
+
+&lt;p&gt;Um dos nossos clientes tinha um processo que podia demorar de alguns minutos até varias horas para acabar. O resultado do processamento podia variar de alguns kilobytes até 800Mb. Melhorar a performance desse processo não era uma opção. O resultado desse processo era agregado a um resultado de pesquisa. Era aceitável a pesquisa demorar, mas reordenar os resultados da pesquisa ou aplicar qualquer filtro em cima tinha de ser rápido. &lt;/p&gt;
+
+&lt;p&gt;A solução escolhida foi de usar um data grid para cachear o resultado do processo e conseguir acessar esse resultado em alguns milisegundos. Normalmente, se usa um data grid quando precisa de mais memória do que uma única máquina. Um data grid roda em cima de um cluster de máquinas e vai distribuir os dados entre os servidores. A ideia é que qualquer nodo consiga saber aonde achar qualquer informação no cluster. A ilegra costuma usar soluções open source, por isso inicialmente optamos pelo &lt;strong&gt;&lt;a href=&quot;http://www.terracotta.org/&quot; target=&quot;_blank&quot;&gt;Terracota&lt;/a&gt;&lt;/strong&gt;. Porém tivemos algumas dificuldades em configurar ele para descartar as chaves menos usadas. Como o cliente tinha uma licença para usar Coherence, acabamos migrando para essa solução. &lt;/p&gt;
+
+&lt;p&gt;Abaixo listarei algumas estratégias de cache que testamos, e a nossa opinião.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;* Replicate Cache&lt;/strong&gt; - Todos os nodos do cache possuirão os mesmos dados com um rápido acesso. 
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; Quando a necessidade é uma resposta rápida e existe memória suficiente para colocar em todos os nodos.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quando o seu cache contiver muitos dados e o acesso a esses dados não é constante, tornasse custoso manter todos seus nodos com todos os dados replicados.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;* Distributed Cache&lt;/strong&gt; - Todos seus nodos possuem uma área onde guardam lógicamente qual dos nodos contém a informação requisitada.
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; Tipologia ideal quando você possui muitas informações, mas ao mesmo tempo é custoso demais, em relação a memória, replicar esses dados em todos os nodos.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Quanto o maior número de nodos, menor o espaço em memória necessário. Isso acontece porque cada nodo além de saber logicamente onde encontrar a informação, possui uma área primária para guardar os dados e um espaço de backup usado para recuperar as informações caso um nodo desconecte.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;* Near Cache&lt;/strong&gt; - Cada nodo além de possuir a informação de onde os dados estão, igual ao Distributed Cache, possui uma área local em memória configurável que guarda alguns dados previamente acessados.
+&lt;br/&gt;&lt;em&gt;Ideal:&lt;/em&gt; É considerado mais balanceado dos três citados, principalmente em relação ao custo benefício. Além de possuir informações locais já acessadas e de rápida resposta, não guarda fisicamente todos os dados.
+&lt;br/&gt;&lt;em&gt;Observação:&lt;/em&gt; Esse tipo de tipologia tem um ganho de performance, quando o número de nodos do cache é alto e possui um espaço considerável para guardar no cache local algumas informações, evitando assim tráfego desnecessário de rede.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Referências:&lt;/em&gt;
+&lt;br/&gt;* http://terracotta.org/
+&lt;br/&gt;* http://www.oracle.com/technetwork/middleware/coherence/overview/index.html &lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Podcast - Big Data</title>
