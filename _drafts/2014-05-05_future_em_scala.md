@@ -7,7 +7,11 @@ Programas síncronos é executado de forma sequencial enquanto aplicativos assí
 
 Exemplo:
 
-	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta recebida de um remetente . Ou seja as tarefas para qualquer coisa além do envio de e-mail são bloqueados pela resposta que você não tem controle se pode tomar muito tempo. Na maneira assíncrona é possível enviar o e-mail e continuar a trabalhar em outras tarefas enquanto espera a resposta do remetente
+	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta 
+	recebida de um remetente. Ou seja as tarefas para qualquer coisa além do envio de e-mail são 
+	bloqueados pela resposta que você não tem controle se pode tomar muito tempo. Na maneira assíncrona 
+	é possível enviar o e-mail e continuar a trabalhar em outras tarefas enquanto espera a resposta 
+	do remetente.
 
 Quando uma requisição web chega ao servidor a aplicação precisa executar vários processos até montar o HTML de resposta, esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
 	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita (I/0), como salvar um registro no Banco de dados, executar uma query pesada , chamar um web service, podemos dizer que a requisição tem um I/O bound.
