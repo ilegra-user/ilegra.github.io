@@ -17,6 +17,8 @@ Quando uma requisição web chega ao servidor a aplicação precisa executar vá
 	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita (I/0), como salvar um registro no Banco de dados, executar uma query pesada , chamar um web service, podemos dizer que a requisição tem um I/O bound.
 	Mas se a requisição demora mais por processamento, como por exemplo processar um array de objetos, realizar transformação de uma estrutura em outra, gerar um PDF, montar um HTML, podemos dizer que a requisição tem um CPU bound.
 	Ou seja temos dois tipos de possíveis gargalos, no caso do CPU bound a única maneira de resolver isso é ter CPU  mais rápidos, ou CPUs em paralelo,  ou seja a aplicação precisa suportar multithread ou multi- processos para utilizar todas as CPUs. No caso do I/O bound o sistema precisa suportar chamadas assíncronas, ou seja o sistema terá chamadas de notificações de eventos que informarão quando por exemplo uma chamada ao banco de dados foi concluída.
+O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a idéia de programação assíncrona. Usando essa API de Concurrency o  compilador faz o trabalho difícil, e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
+Hoje na ilegra temos algumas aplicações 100% do conceito assíncrono, deixando as aplicações com uma grande escalabilidade que indica sua habilidade de manipular uma porção crescente de trabalho de forma uniforme, ou estar preparado para crescer ou se tornar distribuído com pouco esforço.
 
 ##Funture/Promise em  Scala#
 
@@ -113,7 +115,10 @@ Cria-se uma promessa que é o lugar onde você vai colocar o resultado da comput
 - No Failure  é atribuído o valor de falha ao promises
 - Esses promise continua nos devolvendo um Future, mas uma das formas de eu interagir com esse future é utilizando um map, com um map eu acesso os valores do future e com o segundo map percorremos a Lista de Usuários.
 
+*****Outras formas de utizar o future sem o callback (Promise) é utilizar map e for-comprehensions.
+
 **Conclusão**
+
 Usar o conceito de programação assíncrona é certamente um benefício dentro do código. Um conceito simples como um gerenciador de fila de procesos pode mudar totalmente a forma como se constrói aplicativos.
 Se fila está grande e os jobs estiverem acumulando, podemos adicionar mais consumidores. Pois eles já estão configurados para ler da fila.
 Então podemos  pensar que um Future são os produtores e Promises são os consumidores.  E um Future é essencial para uma referencia read-only para um valor que ainda deve ser processado e um Promise é praticamente o mesmo, exceto que podemos escrever nele,  em resumo os dois você pode realizar leitura mas apenas no promise você pode escrever. 
