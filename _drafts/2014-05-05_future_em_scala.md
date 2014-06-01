@@ -1,6 +1,7 @@
 #Async em  Scala 
 	
-Com a possibilidade de usar em qualquer aplicação diversos tipos de servidores de forma distribuída(como servidores da Amazon, serviços do Google etc), é importante saber quais são os possíveis problemas que podem surgir, e como a programação assíncrona pode ser usada para resolver esses problemas.	
+Um dos conceitos que podemos considerar chave para a escalabilidade é a programação assíncrona.
+Ela consiste em realizar qualquer tarefa mais pesada em termos de recursos computacionais em um processo ou até mesmo máquina separada, fora do workflow natural de um aplicativo.	
 Em uma requisição assíncrona, não existe sincronismo entre as requisições, sendo assim, podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta.
 A programação assíncrona é a que permite a delegação de processo de aplicação a outros tópicos , sistemas e ou dispositivos. 
 Programas síncronos é executado de forma sequencial enquanto aplicativos assíncronos pode iniciar uma nova operação e sem esperar a conclusão dos novos que ele mesmo pode continuar a trabalhar no seu próprio fluxo .
@@ -112,10 +113,11 @@ Cria-se uma promessa que é o lugar onde você vai colocar o resultado da comput
 - No Failure  é atribuído o valor de falha ao promises
 - Esses promise continua nos devolvendo um Future, mas uma das formas de eu interagir com esse future é utilizando um map, com um map eu acesso os valores do future e com o segundo map percorremos a Lista de Usuários.
 
-
-        Então podemos  pensar que um Future são os produtores e Promises são os consumidores.  E um Future é essencial para uma referencia read-only para um valor que ainda deve ser processado e um Promise é praticamente o mesmo, exceto que podemos escrever nele,  em resumo os dois você pode realizar leitura mas apenas no promise você pode escrever. 
+**Conclusão**
+Usar o conceito de programação assíncrona é certamente um benefício dentro do código. Um conceito simples como um gerenciador de fila de procesos pode mudar totalmente a forma como se constrói aplicativos.
+Se fila está grande e os jobs estiverem acumulando, podemos adicionar mais consumidores. Pois eles já estão configurados para ler da fila.
+Então podemos  pensar que um Future são os produtores e Promises são os consumidores.  E um Future é essencial para uma referencia read-only para um valor que ainda deve ser processado e um Promise é praticamente o mesmo, exceto que podemos escrever nele,  em resumo os dois você pode realizar leitura mas apenas no promise você pode escrever. 
         A principal vantagem de Future e (programação assíncrona) , é a tarefa  atuar em segmento diferente, por isso thread principal não fica bloqueada até a tarefa ser concluída. É possível executar outras tarefas ao mesmo tempo. O modelo assíncrono em caso de tarefa de longa duração é muito útil, para que o seu aplicativo reaja a outras ações realizadas pelo  usuário.
-> Existem outras formas de se trabalhar com Promise e Future mas a ideia foi apresentar a forma mais comum dessas APIs.
 
 
 ###Referências:###
