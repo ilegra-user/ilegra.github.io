@@ -139,23 +139,23 @@ Quando você está escrevendo a função que você passa para um map, você est�
 
 **Exemplo:**
 
-var listNumbers:Future[List] = Future(List(1,2,3,4,5))
-
-listNumbers.map(list=> list.map(number=> println(number)))
-resultado = 1234 
+	var listNumbers:Future[List] = Future(List(1,2,3,4,5))
+	
+	listNumbers.map(list=> list.map(number=> println(number)))
+	resultado = 1234 
 
 Se o cálculo de um futuro dependee do resultado de outra, podemos provavelmente recorrer a flatMap para evitar uma estrutura profundamente aninhada de futuros.
 FlatMap funciona aplicando uma função que retorna uma seqüência para cada elemento da lista, e achatando os resultados na lista original, e tem a grande vantagem de fazer o mesmo com funções que estão dentro de um future.
 
 **Exemplo:**
 
-val f1 = Future ( "Hello" + "World" )
-
-val f2 = Future(3)
-
-val f3 = f1.flatMap (x ⇒ f2.map (y => x.length * y))
-
-f3.value = Some(Success(30))
+	val f1 = Future ( "Hello" + "World" )
+	
+	val f2 = Future(3)
+	
+	val f3 = f1.flatMap (x ⇒ f2.map (y => x.length * y))
+	
+	f3.value = Some(Success(30))
 
 **Conclusão**
 
