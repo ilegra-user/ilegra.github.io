@@ -1,6 +1,6 @@
 #Async em  Scala 
 	
-Um dos conceitos que podemos considerar chave para a escalabilidade é a programação assíncrona.
+Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
 Ela consiste em realizar qualquer tarefa mais pesada em termos de recursos computacionais em um processo ou até mesmo máquina separada, fora do workflow natural de um aplicativo.	
 Em uma requisição assíncrona, não existe sincronismo entre as requisições, sendo assim, podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta.
 A programação assíncrona é a que permite a delegação de processo de aplicação a outros tópicos , sistemas e ou dispositivos. 
@@ -14,7 +14,7 @@ Exemplo:
 	a trabalhar em outras tarefas enquanto espera a resposta do remetente.
 
 Quando uma requisição web chega ao servidor a aplicação precisa executar vários processos até montar o HTML de resposta, esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
-	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita (I/0), como salvar um registro no Banco de dados, executar uma query pesada , chamar um web service, podemos dizer que a requisição tem um I/O bound.
+	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita ([I/0][7]), como salvar um registro no Banco de dados, executar uma query pesada , chamar um web service, podemos dizer que a requisição tem um I/O bound.
 	Mas se a requisição demora mais por processamento, como por exemplo processar um array de objetos, realizar transformação de uma estrutura em outra, gerar um PDF, montar um HTML, podemos dizer que a requisição tem um CPU bound.
 	Ou seja temos dois tipos de possíveis gargalos, no caso do CPU bound a única maneira de resolver isso é ter CPU  mais rápidos, ou CPUs em paralelo,  ou seja a aplicação precisa suportar multithread ou multi- processos para utilizar todas as CPUs. No caso do I/O bound o sistema precisa suportar chamadas assíncronas, ou seja o sistema terá chamadas de notificações de eventos que informarão quando por exemplo uma chamada ao banco de dados foi concluída.
 O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a idéia de programação assíncrona. Usando essa API de Concurrency o  compilador faz o trabalho difícil, e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
@@ -165,22 +165,13 @@ Então podemos  pensar que um Future são os produtores e Promises são os consu
         A principal vantagem de Future e (programação assíncrona) , é a tarefa  atuar em segmento diferente, por isso thread principal não fica bloqueada até a tarefa ser concluída. É possível executar outras tarefas ao mesmo tempo. O modelo assíncrono em caso de tarefa de longa duração é muito útil, para que o seu aplicativo reaja a outras ações realizadas pelo  usuário.
 
 
-###Referências:###
-
-- http://danielwestheide.com/blog/2013/01/09/the-neophytes-guide-to-scala-part-8-welcome-to-the-future.html
-
-- <http://arild.github.io/scala-workshop>
-
-- <http://docs.scala-lang.org/overviews/core/futures.html>
-
-- <http://www.slideshare.net/AlexandruNedelcu/prezentare-25762173>
-
-- <http://doc.akka.io/docs/akka/2.0.1/scala/futures.html>
-
-- <http://stackoverflow.com/questions/13381134/what-are-the-use-cases-of-scala-concurrent-promise>
-
-- <http://www.akitaonrails.com/2013/12/23/solucoes-para-um-mundo-assincrono-concorrente?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+AkitaOnRails+%28Akita+On+Rails%29#links>
-
-- <http://blogs.technet.com/b/meamcs/archive/2012/09/08/why-a-how-to-asynchronous-programming.aspx>
+[1]: http://danielwestheide.com/blog/2013/01/09/the-neophytes-guide-to-scala-part-8-welcome-to-the-future.html
+[2]: http://arild.github.io/scala-workshop 
+[3]: http://docs.scala-lang.org/overviews/core/futures.html
+[4]: http://www.slideshare.net/AlexandruNedelcu/prezentare-25762173
+[5]: http://doc.akka.io/docs/akka/2.0.1/scala/futures.html
+[6]: http://stackoverflow.com/questions/13381134/what-are-the-use-cases-of-scala-concurrent-promise
+[7]: http://www.akitaonrails.com/2013/12/23/solucoes-para-um-mundo-assincrono-concorrente?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+AkitaOnRails+%28Akita+On+Rails%29#links "I/O"
+[8]: http://blogs.technet.com/b/meamcs/archive/2012/09/08/why-a-how-to-asynchronous-programming.aspx "assíncrona"
 
 
