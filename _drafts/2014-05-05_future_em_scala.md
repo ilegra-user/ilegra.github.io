@@ -10,7 +10,7 @@ Exemplo:
 
 	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta recebida de 
 	um remetente. Ou seja as tarefas para qualquer coisa além do envio de e-mail são bloqueados pela resposta que 
-	você não tem controle se pode tomar muito tempo. Na maneira assíncrona 	é possível enviar o e-mail e continuar 
+	você não tem controle se pode tomar muito tempo. Na maneira assíncrona é possível enviar o e-mail e continuar 
 	a trabalhar em outras tarefas enquanto espera a resposta do remetente.
 
 Quando uma requisição web chega ao servidor a aplicação precisa executar vários processos até montar o HTML de resposta, esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
@@ -20,11 +20,11 @@ Quando uma requisição web chega ao servidor a aplicação precisa executar vá
 O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a idéia de programação assíncrona. Usando essa API de Concurrency o  compilador faz o trabalho difícil, e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
 Hoje na ilegra temos algumas aplicações 100% do conceito assíncrono, deixando as aplicações com uma grande escalabilidade que indica sua habilidade de manipular uma porção crescente de trabalho de forma uniforme, ou estar preparado para crescer ou se tornar distribuído com pouco esforço.
 
-##Funture/Promise em  Scala#
+##Funture/Promise em Scala#
 
 Future e uma API de scala que proporciona uma maneira de executar operações em paralelo de forma não bloqueante. 
  A ideia é que um Future seja uma espécie que objeto que tenha um espaço reservado que podemos trabalhar a espera de um resultado que ainda não possuímos. Com isso podemos compor tarefas simultâneas de forma assíncrona e sem bloqueio de uma forma rápida.
-Em scala podemos combinar o Future com flatMap, foreach,  for-comprehensions  e filters de uma forma não bloqueante, e imutável.
+Em scala podemos combinar o Future com maps, for-comprehensions e filters de uma forma não bloqueante, e imutável.
 Então definindo Future podemos dizer que é um objeto que contem um valor que pode se tornar disponível . 
 Um Future pode ser dizer completo ou concluído de duas formas:
 - Concluído com sucessos e tem valor.
@@ -45,6 +45,7 @@ Um Future pode ser dizer completo ou concluído de duas formas:
 
 - `import ExecutionContext.Implicits.global` -> importa um contexto de execução global padrão do scala , que fornece pools de threads para lidar com assíncronos . 
 - em seguida estamos fazendo uma chamada hipotética ao Banco de Dados e com sabemos que isso pode levar algum tempo, faremos uma chamada assíncrona para não bloquear o resto do programa, e no quando estiver pronto teremos a resposta na variável `f`.
+
 
 ##Callbacks:##
 
@@ -116,7 +117,45 @@ Cria-se uma promessa que é o lugar onde você vai colocar o resultado da comput
 - No Failure  é atribuído o valor de falha ao promises
 - Esses promise continua nos devolvendo um Future, mas uma das formas de eu interagir com esse future é utilizando um map, com um map eu acesso os valores do future e com o segundo map percorremos a Lista de Usuários.
 
-*****Outras formas de utizar o future sem o callback (Promise) é utilizar map e for-comprehensions.
+
+##For-comprehensions/Maps/FlatMap##
+
+Interarir com os futures com callback e promisses é simples, mas exigem que se escreva muito código quando na verdade quermos alguma forma mais rápida e simples. Combinando com outras funções é aonde está o maior ganho dos futures. 
+O for-comprehension é uma das maneiras de iteratir com funções que estão dentro de um future, dentro dele podemos avaliar processamentos em paralelo e no final agregar em um só resultado.
+
+
+**Exemplo:**
+
+	val result1:Future[List[User]] = future(dao.getUsers())
+	val result2:Future[List[Pessoa]] = future(dao.getPessoas())
+	
+	val res = for {
+	   r1 <- result1
+	   r2 <- result2
+	} yield (r1+r2)
+
+O mesmo podemos fazer com a função de Map, interagir com processamentos que estão dentro de um future.
+Quando você está escrevendo a função que você passa para um map, você está com o futuro, ou melhor, em um futuro possível. Essa função de mapeamento é executado assim que o seu futuro [de List]  for concluída com êxito. No entanto, dessa forma estamos esperando apenas o resultado de sucesso de uma lista de números, caso essa lista venha a falhar vamos receber um Future[List] com uma falha, o mesmo caso podemos considera no exemplo anterior com o for-comprehension.
+
+**Exemplo:**
+
+var listNumbers:Future[List] = Future(List(1,2,3,4,5))
+
+listNumbers.map(list=> list.map(number=> println(number)))
+resultado = 1234 
+
+Se o cálculo de um futuro dependee do resultado de outra, podemos provavelmente recorrer a flatMap para evitar uma estrutura profundamente aninhada de futuros.
+FlatMap funciona aplicando uma função que retorna uma seqüência para cada elemento da lista, e achatando os resultados na lista original, e tem a grande vantagem de fazer o mesmo com funções que estão dentro de um future.
+
+**Exemplo:**
+
+val f1 = Future ( "Hello" + "World" )
+
+val f2 = Future(3)
+
+val f3 = f1.flatMap (x ⇒ f2.map (y => x.length * y))
+
+f3.value = Some(Success(30))
 
 **Conclusão**
 
@@ -127,6 +166,8 @@ Então podemos  pensar que um Future são os produtores e Promises são os consu
 
 
 ###Referências:###
+
+- http://danielwestheide.com/blog/2013/01/09/the-neophytes-guide-to-scala-part-8-welcome-to-the-future.html
 
 - <http://arild.github.io/scala-workshop>
 
