@@ -17,9 +17,9 @@ O que acontece se o tempo de processar uma linha é maior do que o tempo de envi
 Play framework, [já vem que uma implementaço de stream][3]. Essa implementaço vem do Haskell com Iteratee e Enumerator. Um Enumerator produce os dados e um Iteratee consume eles. O problema é que essa impelementaço é muito complicada e a API dificil de entender. Para a verso 2.4, que vai sair no final do ano 2014, Play terá dois modulos experimentais: um usando [akka-http][4] para gerenciar toda stack http com suporte a reactive stream e um outro modulo permitira o uso [akka-stream][5], que também implementa reactive streams. Em 2015, Play 3, usara reactive stream no lugar do Iteratee/Enumerator e tera metodos para transformar um Iteratee em Consumer e um Enumerator em Publisher.
 
 ### References ###
-http://www.reactive-streams.org/
-[Introducing Reactive Streams video][1]
-[Play roadmap][2]
+* http://www.reactive-streams.org/
+* [Introducing Reactive Streams video][1]
+* [Play roadmap][2]
 
 
   [1]: https://www.youtube.com/watch?v=khmVMvlP_QA
