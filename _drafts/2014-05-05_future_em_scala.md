@@ -1,6 +1,7 @@
 #Async em  Scala 
 	
-	Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8]. Ela consiste em realizar qualquer tarefa mais pesada, em termos de recursos computacionais, em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
+	Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
+	Ela consiste em realizar qualquer tarefa mais pesada, em termos de recursos computacionais, em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
 	Em uma requisição assíncrona, não existe sincronismo entre as requisições, sendo assim, podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta.
 A programação assíncrona é a que permite a delegação de processo de aplicação para outros tópicos, sistemas e/ou dispositivos. 
 	Programas síncronos são executados de forma sequencial, enquanto, aplicativos assíncronos podem iniciar uma nova operação, sem esperar a conclusão dos novos. Ele mesmo pode continuar a trabalhar no seu próprio fluxo.
