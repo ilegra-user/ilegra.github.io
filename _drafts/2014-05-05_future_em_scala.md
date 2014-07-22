@@ -1,20 +1,20 @@
 #Async em  Scala 
 	
 Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
-Ela consiste em realizar qualquer tarefa mais pesada em termos de recursos computacionais em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
+Ela consiste em realizar qualquer tarefa mais pesada, em termos de recursos computacionais, em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
 Em uma requisição assíncrona, não existe sincronismo entre as requisições, sendo assim, podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta.
 A programação assíncrona é a que permite a delegação de processo de aplicação para outros tópicos, sistemas e/ou dispositivos. 
 Programas síncronos são executados de forma sequencial, enquanto, aplicativos assíncronos podem iniciar uma nova operação, sem esperar a conclusão dos novos. Ele mesmo pode continuar a trabalhar no seu próprio fluxo.
 
 Exemplo:
 
-	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta seja recebida 		do remetente. Ou seja, as tarefas para qualquer coisa além do envio de e-mail são bloqueadas pela resposta 	e você não tem controle se isto pode tomar muito tempo. Na maneira assíncrona é possível enviar o e-mail e 
+	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta seja recebida 		do remetente. Ou seja, as tarefas para qualquer coisa, além do envio de e-mail, são bloqueadas pela 	resposta e você não tem controle se isto pode tomar muito tempo. Na maneira assíncrona é possível enviar o e-mail e 
 	continuar a trabalhar em outras tarefas enquanto espera a resposta do remetente.
 
 Quando uma requisição web chega ao servidor, a aplicação precisa executar vários processos até montar o HTML de resposta. Esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
-	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita ([I/0][7]), como salvar um registro no Banco de dados, executar uma query pesada , chamar um web service, podemos dizer que a requisição tem um I/O bound.
-	Mas se a requisição demora mais por processamento, como por exemplo processar um array de objetos, realizar transformação de uma estrutura em outra, gerar um PDF, montar um HTML, podemos dizer que a requisição tem um CPU bound.
-	Ou seja temos dois tipos de possíveis gargalos, no caso do CPU bound a única maneira de resolver isso é ter CPU  mais rápidos, ou CPUs em paralelo,  ou seja a aplicação precisa suportar multithread ou multi- processos para utilizar todas as CPUs. No caso do I/O bound o sistema precisa suportar chamadas assíncronas, ou seja o sistema terá chamadas de notificações de eventos que informarão quando por exemplo uma chamada ao banco de dados foi concluída.
+	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita ([I/0][7]), como salvar um registro no Banco de Dados, executar uma query pesada, chamar um web service - podemos dizer que a requisição tem um I/O bound.
+	Contudo, se a requisição demora mais por processamento, por exemplo, processar um array de objetos, realizar transformação de uma estrutura em outra, gerar um PDF ou montar um HTML, podemos dizer que a requisição tem um CPU bound.
+	Ou seja, temos dois tipos de possíveis gargalos, no caso do CPU bound a única maneira de resolver isso é ter CPUs mais rápidos, ou CPUs em paralelos, ou seja a aplicação precisa suportar multithread ou multi- processos para utilizar todas as CPUs. No caso do I/O bound o sistema precisa suportar chamadas assíncronas, ou seja o sistema terá chamadas de notificações de eventos que informarão quando por exemplo uma chamada ao banco de dados foi concluída.
 O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a idéia de programação assíncrona. Usando essa API de Concurrency o  compilador faz o trabalho difícil, e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
 Hoje na ilegra temos algumas aplicações 100% do conceito assíncrono, deixando as aplicações com uma grande escalabilidade que indica sua habilidade de manipular uma porção crescente de trabalho de forma uniforme, ou estar preparado para crescer ou se tornar distribuído com pouco esforço.
 
