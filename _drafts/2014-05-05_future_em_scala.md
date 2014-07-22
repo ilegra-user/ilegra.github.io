@@ -1,19 +1,17 @@
 #Async em  Scala 
 	
 Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
-Ela consiste em realizar qualquer tarefa mais pesada em termos de recursos computacionais em um processo ou até mesmo máquina separada, fora do workflow natural de um aplicativo.	
+Ela consiste em realizar qualquer tarefa mais pesada em termos de recursos computacionais em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
 Em uma requisição assíncrona, não existe sincronismo entre as requisições, sendo assim, podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta.
-A programação assíncrona é a que permite a delegação de processo de aplicação a outros tópicos , sistemas e ou dispositivos. 
-Programas síncronos é executado de forma sequencial enquanto aplicativos assíncronos pode iniciar uma nova operação e sem esperar a conclusão dos novos que ele mesmo pode continuar a trabalhar no seu próprio fluxo .
+A programação assíncrona é a que permite a delegação de processo de aplicação para outros tópicos, sistemas e/ou dispositivos. 
+Programas síncronos são executados de forma sequencial, enquanto, aplicativos assíncronos podem iniciar uma nova operação, sem esperar a conclusão dos novos. Ele mesmo pode continuar a trabalhar no seu próprio fluxo.
 
 Exemplo:
 
-	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta recebida de 
-	um remetente. Ou seja as tarefas para qualquer coisa além do envio de e-mail são bloqueados pela resposta que 
-	você não tem controle se pode tomar muito tempo. Na maneira assíncrona é possível enviar o e-mail e continuar 
-	a trabalhar em outras tarefas enquanto espera a resposta do remetente.
+	Vamos imaginar um caso em que uma pessoa envie um e-mail e não pode fazer nada até que a resposta seja recebida 		do remetente. Ou seja, as tarefas para qualquer coisa além do envio de e-mail são bloqueadas pela resposta 	e você não tem controle se isto pode tomar muito tempo. Na maneira assíncrona é possível enviar o e-mail e 
+	continuar a trabalhar em outras tarefas enquanto espera a resposta do remetente.
 
-Quando uma requisição web chega ao servidor a aplicação precisa executar vários processos até montar o HTML de resposta, esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
+Quando uma requisição web chega ao servidor, a aplicação precisa executar vários processos até montar o HTML de resposta. Esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
 	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita ([I/0][7]), como salvar um registro no Banco de dados, executar uma query pesada , chamar um web service, podemos dizer que a requisição tem um I/O bound.
 	Mas se a requisição demora mais por processamento, como por exemplo processar um array de objetos, realizar transformação de uma estrutura em outra, gerar um PDF, montar um HTML, podemos dizer que a requisição tem um CPU bound.
 	Ou seja temos dois tipos de possíveis gargalos, no caso do CPU bound a única maneira de resolver isso é ter CPU  mais rápidos, ou CPUs em paralelo,  ou seja a aplicação precisa suportar multithread ou multi- processos para utilizar todas as CPUs. No caso do I/O bound o sistema precisa suportar chamadas assíncronas, ou seja o sistema terá chamadas de notificações de eventos que informarão quando por exemplo uma chamada ao banco de dados foi concluída.
