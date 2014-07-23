@@ -2,8 +2,7 @@
 	
 	Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
 	Ela consiste em realizar qualquer tarefa mais pesada, em termos de recursos computacionais, em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
-	Em uma requisição assíncrona, não existe sincronismo entre as requisições, sendo assim, podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta.
-A programação assíncrona é a que permite a delegação de processo de aplicação para outros tópicos, sistemas e/ou dispositivos. 
+	Em uma requisição assíncrona, não existe sincronismo entre as requisições e podemos enviar diversas requisições em paralelo, onde cada resposta retorna quando estiver pronta. A programação assíncrona é a que permite a delegação de processo de aplicação para outros tópicos, sistemas e/ou dispositivos. 
 	Programas síncronos são executados de forma sequencial, enquanto, aplicativos assíncronos podem iniciar uma nova operação, sem esperar a conclusão dos novos. Ele mesmo pode continuar a trabalhar no seu próprio fluxo.
 
 Exemplo:
@@ -14,16 +13,14 @@ Exemplo:
 	Quando uma requisição web chega ao servidor, a aplicação precisa executar vários processos até montar o HTML de resposta. Esse tempo precisa ser o menor possível para que o mesmo servidor possa responder o máximo possível de requisições por um período de tempo.
 	Se uma requisição demora mais porque precisa ficar esperando operações de leitura e escrita ([I/0][7]), como salvar um registro no Banco de Dados, executar uma query pesada, chamar um web service - podemos dizer que a requisição tem um I/O bound.
 	Contudo, se a requisição demora mais por processamento, por exemplo, para processar um array de objetos, realizar transformação de uma estrutura em outra, gerar um PDF ou montar um HTML - podemos dizer que a requisição tem um CPU bound.
-	Ou seja, temos dois tipos de possíveis gargalos. No caso do CPU bound, a única maneira de resolver isso é ter CPUs mais rápidos, ou CPUs em paralelos. A aplicação precisa suportar multithread ou multi processos para utilizar todas as CPUs. No caso do I/O bound, o sistema precisa suportar chamadas assíncronas. Ele terá chamadas de notificações de eventos que informarão quando, por exemplo, uma chamada ao banco de dados foi concluída.
-O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a ideia de programação assíncrona. Usando essa API de Concurrency, o compilador faz o trabalho difícil e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
-Hoje na ilegra temos algumas aplicações 100% do conceito assíncrono, deixando as aplicações com uma grande escalabilidade. Indicando sua habilidade de manipular uma porção crescente de trabalho de forma uniforme, estar preparado para crescer ou se tornar distribuído com pouco esforço.
+	Assim temos dois tipos de possíveis gargalos. No caso do CPU bound, a única maneira de resolver é ter CPUs mais rápidos ou CPUs em paralelos. A aplicação precisa suportar multithread ou multi processos para utilizar todas as CPUs. No caso do I/O bound, o sistema precisa suportar chamadas assíncronas. Ele terá chamadas de notificações de eventos que informarão quando, por exemplo, uma chamada ao banco de dados foi concluída.
+	O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a ideia de programação assíncrona. Usando essa API de Concurrency, o compilador faz o trabalho difícil e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
+	Atualmente na ilegra temos algumas aplicações 100% do conceito assíncrono, deixando as aplicações com uma grande escalabilidade. Indicando sua habilidade de manipular uma porção crescente de trabalho de forma uniforme, para estar preparado para crescer ou se tornar distribuído com pouco esforço.
 
 ##Funture/Promise em Scala#
 
-	Future é uma API de scala que proporciona uma maneira de executar operações em paralelo de forma não bloqueante.A ideia é que um Future seja uma espécie que objeto que tenha um espaço reservado que podemos trabalhar a espera de um resultado que ainda não possuímos. Com isso podemos compor tarefas simultâneas de forma assíncrona e sem bloqueio de uma forma rápida.
-Em scala podemos combinar o Future com maps, for-comprehensions e filters de uma forma não bloqueante, e imutável.
-Então definindo Future podemos dizer que é um objeto que contem um valor que pode se tornar disponível . 
-Um Future pode ser dizer completo ou concluído de duas formas:
+	Future é uma API de scala que proporciona uma maneira de executar operações em paralelo de forma não bloqueante. A ideia é que um Future seja uma espécie de objeto que tenha um espaço reservado, para que possamos trabalhar com a espera de um resultado que ainda não possuímos. Com isso, podemos compor tarefas simultâneas de forma assíncrona e sem bloqueio de uma forma rápida.
+	Em scala podemos combinar o Future com maps, for-comprehensions e filters de uma forma não bloqueante e imutável. Definindo Future podemos dizer que é um objeto que contém um valor que pode se tornar disponível. Um Future pode ser dizer completo ou concluído de duas formas:
 - Concluído com sucessos e tem valor.
 - Concluído com Falha e possui uma exceção como valor.
 
@@ -40,13 +37,13 @@ Um Future pode ser dizer completo ou concluído de duas formas:
 
 **Onde:**
 
-- `import ExecutionContext.Implicits.global` -> importa um contexto de execução global padrão do scala, que fornece pools de threads para lidar com assíncronos . 
+- `import ExecutionContext.Implicits.global` -> importa um contexto de execução global padrão do scala, que fornece pools de threads para lidar com assíncronos. 
 - em seguida estamos fazendo uma chamada hipotética ao Banco de Dados e como sabemos que isso pode levar algum tempo, faremos uma chamada assíncrona para não bloquear o resto do programa. Quando estiver pronto teremos a resposta na variável `f`.
 
 
 ##Callbacks:##
 
-	Mas para interagir com esses valores do Future precisamos associar a um Callback. Esse callback é chamado de forma assíncrona quando o Future for concluído. Se o Future foi concluído, o registro é associado a um callback, o retorno pode tanto ser executado de forma assíncrona ou sequencial.
+	Para interagir com esses valores do Future precisamos associar a um Callback. Esse callback é chamado de forma assíncrona quando o Future for concluído. Se o Future foi concluído, o registro é associado a um callback, o retorno pode tanto ser executado de forma assíncrona ou sequencial.
 	A forma mais comum de registrar um call-back é usando o método onComplete que aplica seu resultado: a um Success, se foi concluída com êxito e Failure se for concluída, com uma exceção.
         
 **Exemplo:**
@@ -71,14 +68,13 @@ Um Future pode ser dizer completo ou concluído de duas formas:
 	
 ---
 
-        Os métodos OnComplete, Success e Failure são do tipo Unit, logo, esses métodos não podem ser 
+        Os métodos OnComplete, Success e Failure são do tipo Unit. Logo, esses métodos não podem ser 
         encadeados com outros. Tudo que é feito dentro desses métodos, morre ali mesmo.
 
 
 ##Promises##
 
-	Enquanto Future são definidas como um tipo de somente leitura objeto com espaço, sendo reservados para um resultado que ainda não existe, o Promises pode ser pensado como um recipiente onde se atribui o valor de um Future completo. Ou seja, um Promise pode ser usado para completar um future com valor quando tem sucesso no método success ou pode ser uma Promise de exeção no método de Failure. E por padrão um Promise completo retorna um Future.	
-Cria-se uma promessa que é o lugar onde você vai colocar o resultado da computação e da promessa de que você terá um futuro que vai ser usado para ler o resultado que foi colocado na promessa. Quando você completar uma promessa, seja por falha ou sucesso, você irá acionar todo o comportamento que foi anexado ao futuro associado.
+	Enquanto Future são definidas como um tipo de somente leitura objeto com espaço, sendo reservados para um resultado que ainda não existe, o Promises pode ser pensado como um recipiente onde se atribui o valor de um Future completo. Ou seja, um Promise pode ser usado para completar um future com valor quando tem sucesso no método success ou pode ser uma Promise de exeção no método de Failure. E por padrão um Promise completo retorna um Future. Cria-se uma promessa que é o lugar onde você vai colocar o resultado da computação e da promessa de que você terá um futuro que vai ser usado para ler o resultado que foi colocado na promessa. Quando você completar uma promessa, seja por falha ou sucesso, você irá acionar todo o comportamento que foi anexado ao futuro associado.
 
 **Exemplo:**
 
@@ -111,8 +107,8 @@ Cria-se uma promessa que é o lugar onde você vai colocar o resultado da comput
 **Onde:**
 - A variável resultPromises é literalmente a promessa que teremos uma Lista de usuários 
 - No success é atribuído o valor do Future com sucesso para o promises
-- No Failure  é atribuído o valor de falha ao promises
-- Esses promise continua nos devolvendo um Future, mas uma das formas de interagir com esse future é utilizando um map. Com um map, acessamos os valores do future e com o segundo map, percorremos a Lista de Usuários.
+- No Failure é atribuído o valor de falha ao promises
+- Esse promise continua nos devolvendo um Future, mas uma das formas de interagir com esse future é utilizando um map. Com um map, acessamos os valores do future e com o segundo map, percorremos a Lista de Usuários.
 
 
 ##For-comprehensions/Maps/FlatMap##
