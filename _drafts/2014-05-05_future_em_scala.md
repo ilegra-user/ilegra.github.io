@@ -1,4 +1,4 @@
-#Async em  Scala 
+#Async em Scala 
 	
 	Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
 	Ela consiste em realizar qualquer tarefa mais pesada, em termos de recursos computacionais, em um processo ou até mesmo em uma máquina separada, fora do workflow natural de um aplicativo.	
@@ -40,14 +40,14 @@ Um Future pode ser dizer completo ou concluído de duas formas:
 
 **Onde:**
 
-- `import ExecutionContext.Implicits.global` -> importa um contexto de execução global padrão do scala , que fornece pools de threads para lidar com assíncronos . 
-- em seguida estamos fazendo uma chamada hipotética ao Banco de Dados e com sabemos que isso pode levar algum tempo, faremos uma chamada assíncrona para não bloquear o resto do programa, e no quando estiver pronto teremos a resposta na variável `f`.
+- `import ExecutionContext.Implicits.global` -> importa um contexto de execução global padrão do scala, que fornece pools de threads para lidar com assíncronos . 
+- em seguida estamos fazendo uma chamada hipotética ao Banco de Dados e como sabemos que isso pode levar algum tempo, faremos uma chamada assíncrona para não bloquear o resto do programa. Quando estiver pronto teremos a resposta na variável `f`.
 
 
 ##Callbacks:##
 
-Mas para interagir com esses valores  do Future precisamos associar a um Callback. Este callback é chamado de forma assíncrona quando o Future for concluído. Se o Future  foi concluído o registro é associado a um callback, o retorno pode tanto ser executado de forma assíncrona, ou sequencial.
-A forma mais comum de registra um call-back é usando o método onComplete, que aplica seu resultado a um Success se foi concluída com êxito e Failure se for concluída com um exceção.
+	Mas para interagir com esses valores do Future precisamos associar a um Callback. Esse callback é chamado de forma assíncrona quando o Future for concluído. Se o Future foi concluído, o registro é associado a um callback, o retorno pode tanto ser executado de forma assíncrona ou sequencial.
+	A forma mais comum de registrar um call-back é usando o método onComplete que aplica seu resultado: a um Success, se foi concluída com êxito e Failure se for concluída, com uma exceção.
         
 **Exemplo:**
 
@@ -71,13 +71,13 @@ A forma mais comum de registra um call-back é usando o método onComplete, que 
 	
 ---
 
-        Os métodos OnComplete , Success e Failure são do tipo Unit, então esse métodos não podem ser 
-        encadeados com outros ou seja tudo que é feito dentro desses métodos morre ali mesmo.
+        Os métodos OnComplete, Success e Failure são do tipo Unit, logo, esses métodos não podem ser 
+        encadeados com outros. Tudo que é feito dentro desses métodos, morre ali mesmo.
 
 
 ##Promises##
 
-Enquanto Future são definidas como um tipo de somente leitura objeto com espaço reservado para um resultado que ainda não existe, o Promises pode ser pensado como um recipiente onde se atribui o valor de um Future completo.  Ou seja um Promise pode ser usado para completar um future com valor quando tem sucesso no método success ou pode ser uma Promise de exeção no método de Failure. E por padrão um Promise completo retorna um Future.	
+	Enquanto Future são definidas como um tipo de somente leitura objeto com espaço, sendo reservados para um resultado que ainda não existe, o Promises pode ser pensado como um recipiente onde se atribui o valor de um Future completo. Ou seja, um Promise pode ser usado para completar um future com valor quando tem sucesso no método success ou pode ser uma Promise de exeção no método de Failure. E por padrão um Promise completo retorna um Future.	
 Cria-se uma promessa que é o lugar onde você vai colocar o resultado da computação e da promessa de que você terá um futuro que vai ser usado para ler o resultado que foi colocado na promessa. Quando você completar uma promessa, seja por falha ou sucesso, você irá acionar todo o comportamento que foi anexado ao futuro associado.
 
 **Exemplo:**
@@ -112,13 +112,13 @@ Cria-se uma promessa que é o lugar onde você vai colocar o resultado da comput
 - A variável resultPromises é literalmente a promessa que teremos uma Lista de usuários 
 - No success é atribuído o valor do Future com sucesso para o promises
 - No Failure  é atribuído o valor de falha ao promises
-- Esses promise continua nos devolvendo um Future, mas uma das formas de eu interagir com esse future é utilizando um map, com um map eu acesso os valores do future e com o segundo map percorremos a Lista de Usuários.
+- Esses promise continua nos devolvendo um Future, mas uma das formas de interagir com esse future é utilizando um map. Com um map, acessamos os valores do future e com o segundo map, percorremos a Lista de Usuários.
 
 
 ##For-comprehensions/Maps/FlatMap##
 
-Interarir com os futures com callback e promisses é simples, mas exigem que se escreva muito código quando na verdade quermos alguma forma mais rápida e simples. Combinando com outras funções é aonde está o maior ganho dos futures. 
-O for-comprehension é uma das maneiras de iteratir com funções que estão dentro de um future, dentro dele podemos avaliar processamentos em paralelo e no final agregar em um só resultado.
+	Interarir com os futures com callback e promisses é simples, mas exige que se escreva muitos códigos. Quando na verdade, queremos alguma forma mais rápida e simples. Combinando com outras funções é onde está o maior ganho dos futures. 
+	O for-comprehension é uma das maneiras de iteragir com funções que estão dentro de um future. Dentro dele podemos avaliar processamentos em paralelo e no final agregar em um só resultado.
 
 
 **Exemplo:**
@@ -131,8 +131,7 @@ O for-comprehension é uma das maneiras de iteratir com funções que estão den
 	   r2 <- result2
 	} yield (r1+r2)
 
-O mesmo podemos fazer com a função de Map, interagir com processamentos que estão dentro de um future.
-Quando você está escrevendo a função que você passa para um map, você está com o futuro, ou melhor, em um futuro possível. Essa função de mapeamento é executado assim que o seu futuro [de List]  for concluída com êxito. No entanto, dessa forma estamos esperando apenas o resultado de sucesso de uma lista de números, caso essa lista venha a falhar vamos receber um Future[List] com uma falha, o mesmo caso podemos considera no exemplo anterior com o for-comprehension.
+	O mesmo podemos fazer com a função de Map: interagir com processamentos que estão dentro de um future. Quando você está escrevendo a função que você passa para um map, você está com o futuro, ou melhor, em um futuro possível. Essa função de mapeamento é executado assim que o seu futuro [de List] for concluído com êxito. No entanto, dessa forma estamos esperando apenas o resultado de sucesso de uma lista de números. Caso essa lista venha a falhar, vamos receber um Future[List] com uma falha, o mesmo caso podemos considerar no exemplo anterior com o for-comprehension.
 
 **Exemplo:**
 
@@ -141,8 +140,8 @@ Quando você está escrevendo a função que você passa para um map, você est�
 	listNumbers.map(list=> list.map(number=> println(number)))
 	resultado = 1234 
 
-Se o cálculo de um futuro dependee do resultado de outra, podemos provavelmente recorrer a flatMap para evitar uma estrutura profundamente aninhada de futuros.
-FlatMap funciona aplicando uma função que retorna uma seqüência para cada elemento da lista, e achatando os resultados na lista original, e tem a grande vantagem de fazer o mesmo com funções que estão dentro de um future.
+	Se o cálculo de um futuro depende do resultado de outra, podemos provavelmente recorrer a flatMap para evitar uma estrutura profundamente aninhada de futuros.
+FlatMap funciona aplicando uma função que retorna uma sequência para cada elemento da lista, achatando os resultados na lista original. Tem a grande vantagem de fazer o mesmo com funções que estão dentro de um future.
 
 **Exemplo:**
 
@@ -156,10 +155,10 @@ FlatMap funciona aplicando uma função que retorna uma seqüência para cada el
 
 **Conclusão**
 
-Usar o conceito de programação assíncrona é certamente um benefício dentro do código. Um conceito simples como um gerenciador de fila de procesos pode mudar totalmente a forma como se constrói aplicativos.
-Se fila está grande e os jobs estiverem acumulando, podemos adicionar mais consumidores. Pois eles já estão configurados para ler da fila.
-Então podemos  pensar que um Future são os produtores e Promises são os consumidores.  E um Future é essencial para uma referencia read-only para um valor que ainda deve ser processado e um Promise é praticamente o mesmo, exceto que podemos escrever nele,  em resumo os dois você pode realizar leitura mas apenas no promise você pode escrever. 
-        A principal vantagem de Future e (programação assíncrona) , é a tarefa  atuar em segmento diferente, por isso thread principal não fica bloqueada até a tarefa ser concluída. É possível executar outras tarefas ao mesmo tempo. O modelo assíncrono em caso de tarefa de longa duração é muito útil, para que o seu aplicativo reaja a outras ações realizadas pelo  usuário.
+	Usar o conceito de programação assíncrona é certamente um benefício dentro do código. Um conceito simples como um gerenciador de fila de procesos pode mudar totalmente a forma como se constrói aplicativos.
+	Se fila está grande e os jobs estiverem acumulando, podemos adicionar mais consumidores. Pois eles já estão configurados para ler da fila.
+	Podemos pensar que um Future são os produtores e Promises são os consumidores. Future é essencial para uma referência read-only para um valor que ainda deve ser processado. Promise é praticamente o mesmo, exceto que podemos escrever nele. Em resumo, nos dois você pode realizar leitura, contudo, apenas no promise você pode escrever. 
+        A principal vantagem de Future (programação assíncrona), é a tarefa  de atuar em segmentos diferentes, por isso thread principal não fica bloqueada até a tarefa ser concluída. É possível executar outras tarefas ao mesmo tempo. O modelo assíncrono em caso de tarefa de longa duração é muito útil, para que o seu aplicativo reaja a outras ações realizadas pelo usuário.
 
 
 [1]: http://danielwestheide.com/blog/2013/01/09/the-neophytes-guide-to-scala-part-8-welcome-to-the-future.html
