@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: Async em Scala
+title: Futures em Scala
 author: Rafael Salerno
 categories: functional-programming
 ---
