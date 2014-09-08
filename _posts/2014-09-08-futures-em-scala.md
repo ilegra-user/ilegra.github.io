@@ -1,3 +1,11 @@
+---
+layout: post
+comments: true
+title: Async em Scala
+author: Rafael Salerno
+categories: functional-programming
+---
+
 #Async em Scala 
 	
 	Um dos conceitos que podemos considerar chave para a escalabilidade é a programação [assíncrona][8].
