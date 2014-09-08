@@ -75,8 +75,8 @@ A forma mais comum de registrar um call-back é usando o método onComplete que 
     }
 	
 
-        Os métodos OnComplete, Success e Failure são do tipo Unit. Logo, esses métodos não podem ser 
-        encadeados com outros. Tudo que é feito dentro desses métodos, morre ali mesmo.
+Os métodos OnComplete, Success e Failure são do tipo Unit. Logo, esses métodos não podem ser 
+encadeados com outros. Tudo que é feito dentro desses métodos, morre ali mesmo.
 
 
 Promises
