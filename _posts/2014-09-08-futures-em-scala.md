@@ -23,7 +23,7 @@ Temos dois tipos possíveis de gargalos. No caso do CPU bound, a única maneira 
 O Scala tem uma abordagem em sua API de Concurrency muito simples para implementar a ideia de programação assíncrona. Usando essa API de Concurrency, o compilador faz o trabalho difícil e o aplicativo mantém a estrutura lógica que se assemelha ao código síncrono. Como resultado, obtemos todas as vantagens da programação assíncrona com pouco do esforço.
 Atualmente na ilegra temos algumas aplicações 100% do conceito assíncrono, deixando as aplicações com uma grande escalabilidade. Indicando sua habilidade de manipular uma porção crescente de trabalho de forma uniforme, para estar preparado para crescer ou se tornar distribuído com pouco esforço.
 
-Funture/Promise em Scala
+Future/Promise em Scala
 ---------------------
 
 Future é uma API de scala que proporciona uma maneira de executar operações em paralelo de forma não bloqueante. A ideia é que um Future seja uma espécie de objeto que tenha um espaço reservado, para que possamos trabalhar com a espera de um resultado que ainda não possuímos. Com isso, podemos compor tarefas simultâneas de forma assíncrona e sem bloqueio de uma forma rápida.
