@@ -1,3 +1,10 @@
+### Steps Vagrant Environment Setup:
+
+```
+vagrant up
+vagrant ssh
+```
+
 ### Important links:
 
 * Blog builder: http://jekyllrb.com/
