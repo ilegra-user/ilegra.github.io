@@ -1,4 +1,4 @@
-### Steps Vagrant Environment Setup:
+### Steps Vagrant Environment Setup: (https://coderwall.com/p/xrfadg)
 
 ```
 vagrant up
