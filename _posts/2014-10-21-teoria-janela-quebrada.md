@@ -9,7 +9,7 @@ categories: apresentacoes
 
 A apresentação da [Teorias das Janelas Quebradas][1], é originária de um artigo americano que explica os motivos do vandalismo em certas áreas da cidade. Essa teoria acabou sendo relacionada com a área de TI, pelo livro [The Progmatic Programmer][2], que compara o esse comportamento antissocial nas cidades com a deterioração do código em sistemas.
 
-A apresentação abaixo explora mais detalhes a teoria, mostrando alguns pontos críticos e algumas técnicas. 
+A apresentação abaixo explora mais detalhes da teoria, mostrando alguns pontos críticos e algumas técnicas. 
 
 
 <center>
